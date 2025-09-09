@@ -43,7 +43,7 @@ const {
   const path = require('path')
   const prefix = config.PREFIX
   
-  const ownerNumber = ['26777821911']
+  const ownerNumber = ['255783394967']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -113,7 +113,7 @@ const port = process.env.PORT || 9090;
   console.log('Bot connected to whatsapp ✅')
   
   let up = `┏──────────────⊷
-┊ ɴᴀᴍᴇ : *ɴנɐႦυℓσ נႦ is online*
+┊ ɴᴀᴍᴇ : *𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2 is online*
 ┗──────────────⊷
 ┏ *【 ᴅᴇᴠɪᴄᴇ ᴏɴʟɪɴᴇ 】⇳︎*
 - . ① *ᴘɪɴɢ*
@@ -210,7 +210,7 @@ const port = process.env.PORT || 9090;
   conn.sendMessage(from, { text: teks }, { quoted: mek })
   }
   const udp = botNumber.split('@')[0];
-    const jawad = ('254794146821', '25799056874', '254785392165');
+    const jawad = ('255792863105', '255782305254', '25583394967');
     let isCreator = [udp, jawad, config.DEV]
 					.map(v => v.replace(/[^0-9]/g) + '@s.whatsapp.net')
 					.includes(mek.sender);
@@ -257,9 +257,9 @@ const port = process.env.PORT || 9090;
 				}
  //================ownerreact==============
     
-  if(senderNumber.includes("254701082940")){
+  if(senderNumber.included"(255783394967)){
   if(isReact) return
-  m.react("🤍")
+  m.react("🇹🇿")
    }
   //==========public react============//
   // Auto React 
@@ -780,7 +780,7 @@ if (!isReact && senderNumber === botNumber) {
   }
   
   app.get("/", (req, res) => {
-  res.send("Njabulo Jb max v1 online 🟢");
+  res.send("𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2nline 🟢");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
