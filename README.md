@@ -13,7 +13,7 @@
       Fast Fork and star and get you session ld press Heroku deploy you bot.
       <br><br>
       <a href="https://github.com/Mrandbad/ANDBAD-MD-V2/fork">
-        <img src="https://img.shields.io/badge/FORK-purple" alt="FORK NJABULOJ" width="150">
+        <img src="https://img.shields.io/badge/FORK-purple" alt="FORK 𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2" width="150">
       </a>
     </td>
     <td align="center">
