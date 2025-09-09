@@ -46,7 +46,7 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -54,7 +54,7 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: 'CRISS AI',
+                        newsletterName: '𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰',
                         serverMessageId: 143
                     }
                 }
@@ -124,7 +124,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -132,7 +132,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
@@ -190,7 +190,7 @@ async (conn, mek, m, { from, quoted, reply }) => {
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -198,7 +198,7 @@ async (conn, mek, m, { from, quoted, reply }) => {
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
@@ -273,7 +273,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -281,7 +281,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
@@ -351,7 +351,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -359,7 +359,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
@@ -418,7 +418,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -426,7 +426,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
@@ -489,7 +489,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -497,7 +497,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
@@ -541,7 +541,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -549,7 +549,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
@@ -600,7 +600,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -608,7 +608,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
@@ -661,7 +661,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -669,7 +669,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
@@ -730,7 +730,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -738,7 +738,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
@@ -789,7 +789,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg` },
+                image: { url: `https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -797,7 +797,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: "CRISS AI",
+                        newsletterName: "𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰",
                         serverMessageId: 143
                     }
                 }
