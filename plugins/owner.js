@@ -29,8 +29,8 @@ async (conn, mek, m, { from }) => {
 
         // Send the owner contact message with image and audio
         await conn.sendMessage(from, {
-            image: { url: 'https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg' }, // Image URL from your request
-            caption: `╭━━〔 *CRISS-AI* 〕━━┈⊷
+            image: { url: 'https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg' }, // Image URL from your request
+            caption: `╭━━〔 *𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰* 〕━━┈⊷
 ┃◈╭─────────────·๏
 ┃◈┃• *Here is the owner details*
 ┃◈┃• *Name* - ${ownerName}
@@ -45,7 +45,7 @@ async (conn, mek, m, { from }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363417599637828@newsletter',
-                    newsletterName: 'CRISS AI',
+                    newsletterName: '𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰',
                     serverMessageId: 143
                 }            
             }
