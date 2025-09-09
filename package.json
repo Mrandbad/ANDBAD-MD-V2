@@ -1,13 +1,13 @@
 
 {
-  "name": "NjabuloJb-max",
+  "name": "ANDBAD-MD-V2",
   "version": "4.5.0",
   "description": "A WhatsApp Bot Created By NjabuloJb",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name NjabuloJb-max",
-    "stop": "pm2 stop NjabuloJb-max",
-    "restart": "pm2 restart NjabuloJb-max"
+    "start": "pm2 start index.js --deep-monitoring --attach --name ANDBAD-MD-V2",
+    "stop": "pm2 stop ANDBAD-MD-V2",
+    "restart": "pm2 restart ANDBAD-MD-V2"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.18",
