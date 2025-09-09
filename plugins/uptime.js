@@ -120,7 +120,7 @@ ${config.DESCRIPTION}`;
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363378608564635@newsletter',
-                    newsletterName: config.OWNER_NAME || 'CRISS AI SUPPORT',
+                    newsletterName: config.OWNER_NAME || '𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰 SUPPORT',
                     serverMessageId: 143
                 }
             }
