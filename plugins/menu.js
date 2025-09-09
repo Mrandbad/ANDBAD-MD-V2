@@ -16,7 +16,7 @@ cmd({
             react: { text: '⏳', key: mek.key }
         });
 
-        const menuCaption = `╭━━━〔 *${config.BOT_NAME}* 〕━━━┈⊷
+        const menuCaption = `╭━━━〔 *ANDBAD-MD-V2* 〕━━━┈⊷
 ┃★╭──────────────
 ┃★│ 👑 *Owner :* ${config.OWNER_NAME}
 ┃★│ 🤖 *Baileys :* Multi Device
@@ -48,8 +48,8 @@ cmd({
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363417599637828@newsletter',
-                newsletterName: config.OWNER_NAME,
+                newsletterJid: 'ANDBAD-MD-V2',
+                newsletterName: "ANDBAD-MD-V2",
                 serverMessageId: 143
             }
         };
@@ -59,17 +59,39 @@ cmd({
             {
                 image: { url: config.MENU_IMAGE_URL || 'https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg' },
                 caption: menuCaption,
-                contextInfo: contextInfo
+                contextInfo: contextInfo,
+                }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
             },
-            { quoted: mek }
-        );
+            message: {
+                contactMessage: {
+                    displayName: "ANDBAD-MD-V2",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=255 783 394 967:+255 783 394 967\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
         // Send menu audio only once
         await conn.sendMessage(from, {
             audio: { url: 'https://github.com/criss-vevo/CRISS-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
             mimetype: 'audio/mp4',
             ptt: true,       
-        }, { quoted: mek });
+            }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "ANDBAD-MD-V2",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=255 783 394 967:+255 783 394 967\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
         const messageID = sentMsg.key.id;
 
