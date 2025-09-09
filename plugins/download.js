@@ -254,7 +254,7 @@ cmd({
 ┃ 📅 *Updated On:* ${app.updated}
 ┃ 👨‍💻 *Developer:* ${app.developer.name}
 ╰━━━━━━━━━━━━━━━┈⊷
-🔗 *Powered By CRISS-AI*`;
+🔗 *Powered By 𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2*`;
 
     await conn.sendMessage(from, { react: { text: "⬆️", key: m.key } });
 
