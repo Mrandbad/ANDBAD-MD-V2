@@ -58,8 +58,8 @@ cmd({
             body: "Follow our WhatsApp Channel",
             mediaType: 1,
             thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
-            sourceUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
-            mediaUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
+            sourceUrl: 'https://whatsapp.com/channel/0029VajQn6YF1YlPE0XgBC2m',
+            mediaUrl: 'https://whatsapp.com/channel/0029VajQn6YF1YlPE0XgBC2m',
             showAdAttribution: true,
             renderLargerThumbnail: true
         }
