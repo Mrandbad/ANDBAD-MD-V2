@@ -28,9 +28,9 @@ MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/0ikqoy.j
 // add custom menu and mention reply image url
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "Njabulo Jb",
+BOT_NAME: process.env.BOT_NAME || "ANDBAD-MD-V2",
 // add bot namw here for menu
-STICKER_NAME: process.env.STICKER_NAME || "Njabulo Jb",
+STICKER_NAME: process.env.STICKER_NAME || "ANDBAD-MD-V2",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
@@ -42,11 +42,11 @@ OWNER_NUMBER: process.env.OWNER_NUMBER || "26777821911",
 // add your bot owner number
 OWNER_NAME: process.env.OWNER_NAME || "NjabuloJb",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "> *✆︎Pσɯҽɾҽԃ Ⴆყ NנɐႦυℓσ נႦ*",
+DESCRIPTION: process.env.DESCRIPTION || "> *✆︎Pσɯҽɾҽԃ Ⴆყ ANDBAD-MD-V2*",
 // add bot owner name    
 ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/0ikqoy.jpg",
 // add img for alive msg
-LIVE_MSG: process.env.LIVE_MSG || "> Zinda Hun Yar *Njabulo Jb*⚡",
+LIVE_MSG: process.env.LIVE_MSG || "> Zinda Hun Yar *ANDBAD-MD-V2*⚡",
 // add alive msg here 
 READ_MESSAGE: process.env.READ_MESSAGE || "false",
 // Turn true or false for automatic read msgs
