@@ -38,7 +38,7 @@ async (conn, mek, m, { from, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363417599637828@newsletter',
+                    newsletterJid: '120363315949714553@newsletter',
                     newsletterName: '𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰',
                     serverMessageId: 143
                 }
@@ -55,7 +55,7 @@ async (conn, mek, m, { from, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363417599637828@newsletter',
+                    newsletterJid: '120363315949714553@newsletter',
                     newsletterName: '𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰',
                     serverMessageId: 143
                 }
