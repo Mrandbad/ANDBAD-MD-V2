@@ -43,7 +43,7 @@ const {
   const path = require('path')
   const prefix = config.PREFIX
   
-  const ownerNumber = ['26777821911']
+  const ownerNumber = ['255783384967']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -113,7 +113,7 @@ const port = process.env.PORT || 9090;
   console.log('Bot connected to whatsapp ✅')
   
   let up = `┏──────────────⊷
-┊ ɴᴀᴍᴇ : *ɴנɐႦυℓσ נႦ is online*
+┊ ɴᴀᴍᴇ : *𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2is online*
 ┗──────────────⊷
 ┏ *【 ᴅᴇᴠɪᴄᴇ ᴏɴʟɪɴᴇ 】⇳︎*
 - . ① *ᴘɪɴɢ*
@@ -123,7 +123,7 @@ const port = process.env.PORT || 9090;
 - . ⑤ *ᴜᴘᴛɪᴍᴇ*
 ┗
 ┏──────────────⊷
-┊ *[ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ʟɪɴᴋᴇᴅ ᴅᴇᴠɪᴄᴇ]*
+┊ *[https://github.com/Mrandbad/ANDBAD-MD-V2]*
 ┗──────────────⊷`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/cigxgs.jpg` }, caption: up })
   }
@@ -780,7 +780,7 @@ if (!isReact && senderNumber === botNumber) {
   }
   
   app.get("/", (req, res) => {
-  res.send("Njabulo Jb max v1 online 🟢");
+  res.send("Njabulo 𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2 online 🟢");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
