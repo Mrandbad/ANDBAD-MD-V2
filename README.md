@@ -30558,10 +30558,10 @@
 
 
 
-# MERCEDES 
+# Mrandbad/ANDBAD-MD-V2
 
 <p align="center">
-  <a href="https://github.com/marisela2/Mercedes"><img src="http://readme-typing-svg.herokuapp.com?color=red&center=true&vCenter=true&multiline=false&lines=Mercedes+Whatsapp+Bot;Developed+by+Marisel;Give+star+and+forks+this+Repo+🌟" alt="EthixReadme"></a>
+  <a href="https://github.com/Mrandbad/ANDBAD-MD-V2"><img src="http://readme-typing-svg.herokuapp.com?color=red&center=true&vCenter=true&multiline=false&lines=Mercedes+Whatsapp+Bot;Developed+by+Njabulo Jb;Give+star+and+forks+this+Repo+🌟" alt="EthixReadme"></a>
 </p>
 
 ## 🚀 Getting Started
@@ -30572,7 +30572,7 @@ To get started with Mercedes, follow these steps:
 
 Start by forking this repository to your own GitHub account. Click the button below to fork:
 
-<a href='https://github.com/betingrich3/Mercedes/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork This Repo-black?style=for-the-badge&logo=git&logoColor=white'/></a>
+<a href='https://github.com/Mrandbad/ANDBAD-MD-V2/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork This Repo-black?style=for-the-badge&logo=git&logoColor=white'/></a>
 
 ### 2. Get Session ID via Pair Code
 
@@ -30598,12 +30598,12 @@ Deploying the bot to Heroku is simple and straightforward. Follow these steps:
 
    Once your Heroku account is ready, deploy the bot by clicking the button below:
 
-[![Find On Whatsapp ](https://img.shields.io/badge/➤Click-Here-red.svg)](https://dashboard.heroku.com/new?template=https://github.com/betingrich3/Mercedes-)
+[![Find On Whatsapp ](https://img.shields.io/badge/➤Click-Here-red.svg)](https://dashboard.heroku.com/new?template=https://github.com/Mrandbad/ANDBAD-MD-V2)
 
 ### ❤️Supporters I Love You❤️
-[![Stargazers repo roster for @betingrich3/Mercedes](http://reporoster.com/stars/dark/betingrich3/Mercedes)](https://github.com/betingrich3/Mercedes/stargazers)
+[![Stargazers repo roster for @betingrich3/Mercedes](http://reporoster.com/stars/dark/betingrich3/Mercedes)](https://github.com/Mrandbad/ANDBAD-MD-V2/stargazers)
      
-[![Forkers repo roster for @betingrich3/Mercedes](http://reporoster.com/forks/dark/betingrich3/Mercedes)](https://github.com/betingrich3/Mercedes/network/members)
+[![Forkers repo roster for @betingrich3/Mercedes](http://reporoster.com/forks/dark/betingrich3/Mercedes)](https://github.com/Mrandbad/ANDBAD-MD-V2/network/members)
 
 Deploy to Termux
 
@@ -30630,7 +30630,7 @@ You can also deploy the bot directly on your Android device using Termux. Here�
    Clone the forked repository using the following command:
 
    ```bash
-   git clone https://github.com/betingrich3/Mercedes.git
+   git clone https://github.com/Mrandbad/ANDBAD-MD-V2.git
    ```
 
 4. **Navigate to the Project Directory:**
