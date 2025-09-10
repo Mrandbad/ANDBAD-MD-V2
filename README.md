@@ -1,10 +1,6 @@
-> general hosting by ANDREWTZ🇹🇿 WhatsApp bot multi device ✓
+a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=THIS+IS+ANDBAD-MD+MADE+IN+TANZANIA+🇹🇿♥️🇹🇿" alt="Typing SVG" /></a>
 
-  
-**Status**: `Active Maintenance`  
-**Estimated Completion**: 2025-11-20  
-**Progress**: 
-```diff
-+ Completed [██████████░░░░░░░░░░░░] 40%
-- Pending  [░░░░░░░░░░░░░░░░░░░░░░] 60%
-```
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
+
+<p align="center">                                              𝗔𝗡𝗗𝗕𝗔𝗗-𝐌𝐃-𝐕1
