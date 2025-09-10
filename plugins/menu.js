@@ -4,10 +4,10 @@ const os = require("os");
 const { runtime } = require('../lib/functions');
 
 cmd({
-    pattern: "menu3",
+    pattern: "menu",
     desc: "Show interactive menu system",
     category: "menu",
-    react: "🧾",
+    react: "🥰",
     filename: __filename
 }, async (conn, mek, m, { from, reply }) => {
     try {
@@ -48,7 +48,7 @@ cmd({
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: 'ANDBAD-MD-V2',
+                newsletterJid: '120363399999197102@newsletter',
                 newsletterName: "ANDBAD-MD-V2",
                 serverMessageId: 143
             }
@@ -57,7 +57,7 @@ cmd({
         const sentMsg = await conn.sendMessage(
             from,
             {
-                image: { url: config.MENU_IMAGE_URL || 'https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg' },
+                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/tvleub.jpg' },
                 caption: menuCaption,
                 contextInfo: contextInfo,
                 }, { quoted: {
@@ -76,7 +76,7 @@ cmd({
 
         // Send menu audio only once
         await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/criss-vevo/CRISS-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
+            audio: { url: 'https://files.catbox.moe/5cxuyv.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,       
             }, { quoted: {
