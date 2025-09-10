@@ -1,6 +1,4 @@
-a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&random=false&width=435&lines=THIS+IS+ANDBAD-MD+MADE+IN+TANZANIA+🇹🇿♥️🇹🇿" alt="Typing SVG" /></a>
-
-<a><img src='https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg'/></a><a><img src='https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg'/></a>
+<a><img src=''/></a><a><img src='https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg'/></a>
 
 
 <p align="center">                                              𝗔𝗡𝗗𝗕𝗔𝗗-𝐌𝐃-𝐕1
