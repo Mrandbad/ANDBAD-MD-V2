@@ -30,7 +30,7 @@ async (conn, mek, m, { from }) => {
         // Send the owner contact message with image and audio
         await conn.sendMessage(from, {
             image: { url: 'https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg' }, // Image URL from your request
-            caption: `╭━━〔 *𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰* 〕━━┈⊷
+            caption: `╭━━〔 *𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2* 〕━━┈⊷
 ┃◈╭─────────────·๏
 ┃◈┃• *Here is the owner details*
 ┃◈┃• *Name* - ${ownerName}
@@ -44,8 +44,8 @@ async (conn, mek, m, { from }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363417599637828@newsletter',
-                    newsletterName: '𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰',
+                    newsletterJid: '120363315949714553@newsletter',
+                    newsletterName: '𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿',
                     serverMessageId: 143
                 }            
             }
