@@ -68,14 +68,27 @@ const {
 
   //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
-if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = config.SESSION_ID.replace("njabulo-jb~", '');
-const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
-filer.download((err, data) => {
-if(err) throw err
-fs.writeFile(__dirname + '/sessions/creds.json', data, () => {
-console.log("Session downloaded ✅")
-})})}
+    if (!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!');
+
+    const sessData = config.SESSION_ID; // use session ID as-is
+    const file = File.fromURL(`https://mega.nz/file/${sessData}`);
+
+    file.loadAttributes().then(() => {
+        const writable = fs.createWriteStream(__dirname + '/sessions/creds.json');
+        file.download().pipe(writable);
+
+        writable.on('finish', () => {
+            console.log("Session downloaded ✅");
+        });
+
+        writable.on('error', (err) => {
+            console.error("Failed to download session:", err);
+        });
+    }).catch(err => {
+        console.error("Failed to load Mega file:", err);
+    });
+}
+
 
 const express = require("express");
 const app = express();
