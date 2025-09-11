@@ -66,14 +66,24 @@ const {
   
   //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
-if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = config.SESSION_ID.replace("njabulo-jb~", '');
-const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
-filer.download((err, data) => {
-if(err) throw err
-fs.writeFile(__dirname + '/sessions/creds.json', data, () => {
-console.log("Session downloaded ✅")
-})})}
+    if (!process.env.SESSION_ID) 
+        return console.log('Please add your session to SESSION_ID env !!');
+
+    const sessionID = process.env.SESSION_ID; // e.g., andbad-AbC123XyZ9
+
+    // Get Pastebin URL from global.sessionMap
+    const pasteUrl = global.sessionMap?.[sessionID];
+    if (!pasteUrl) return console.log("Session ID not found!");
+
+    axios.get(pasteUrl)
+        .then(res => {
+            fs.writeFileSync(__dirname + '/sessions/creds.json', res.data, 'utf8');
+            console.log("Session downloaded ✅");
+        })
+        .catch(err => {
+            console.error("Failed to download session:", err);
+        });
+}
 
 const express = require("express");
 const app = express();
