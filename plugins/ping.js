@@ -1,2 +1,102 @@
-// Obfuscated by www.romek-obfuscation.biz.id
-const _0x22456e=_0x2a64;(function(_0x1ecbd4,_0x4eadb0){const _0x26276e=_0x2a64,_0x2edf81=_0x1ecbd4();while(!![]){try{const _0xa0b527=-parseInt(_0x26276e(0x111))/0x1+-parseInt(_0x26276e(0x119))/0x2*(parseInt(_0x26276e(0x125))/0x3)+-parseInt(_0x26276e(0x121))/0x4+parseInt(_0x26276e(0x128))/0x5*(-parseInt(_0x26276e(0x115))/0x6)+parseInt(_0x26276e(0x126))/0x7+parseInt(_0x26276e(0x12d))/0x8+parseInt(_0x26276e(0x124))/0x9;if(_0xa0b527===_0x4eadb0)break;else _0x2edf81['push'](_0x2edf81['shift']());}catch(_0x109730){_0x2edf81['push'](_0x2edf81['shift']());}}}(_0x4be9,0x3195a));const config=require('../config'),{cmd,commands}=require(_0x22456e(0x12a));function _0x4be9(){const _0x17b315=['477634MpABFG','🛡️','getTime','floor','120363399999197102@newsletter','sendMessage','An\x20error\x20occurred:\x20','main','940712RaZevn','now','Error\x20in\x20ping\x20command:','3649401DEjzsg','3IbPAoS','1942283juIvBn','length','355gjraqD','ms\x20','../command','random','pong','712256tiPWGu','>\x20*ANDBAD-MD-V2:\x20','.ping','BEGIN:VCARD\x0aVERSION:3.0\x0aN:ANDBAD-MD;BOT;;;\x0aFN:ANDBAD-MD\x0aitem1.TEL;waid=255\x20783\x20394\x20967:+255\x20783\x20394\x20967\x0aitem1.X-ABLabel:Bot\x0aEND:VCARD','48037MiATaz','speed','ping','ghexl','3960kOrwVU','error','*PINGING...*','Check\x20bot\x27s\x20response\x20time.'];_0x4be9=function(){return _0x17b315;};return _0x4be9();}function _0x2a64(_0x51cc3b,_0x431391){const _0x4be975=_0x4be9();return _0x2a64=function(_0x2a64a5,_0x59a124){_0x2a64a5=_0x2a64a5-0x10f;let _0x5d9c22=_0x4be975[_0x2a64a5];return _0x5d9c22;},_0x2a64(_0x51cc3b,_0x431391);}cmd({'pattern':_0x22456e(0x113),'alias':[_0x22456e(0x112),_0x22456e(0x12c)],'use':_0x22456e(0x10f),'desc':'Check\x20bot\x27s\x20response\x20time.','category':_0x22456e(0x120),'react':'⚡','filename':__filename},async(_0x373cdd,_0x9687ae,_0x19b751,{from:_0x26b6ef,quoted:_0xa85e70,sender:_0x199f63,reply:_0x46f74f})=>{const _0x2bf56c=_0x22456e,_0x2733b0={'ghexl':function(_0x1c98cd,_0x27480d){return _0x1c98cd*_0x27480d;},'pqnFC':function(_0x5f4a9c,_0x11d854){return _0x5f4a9c===_0x11d854;},'lBDfr':function(_0x11cc4c,_0x7cae1a){return _0x11cc4c-_0x7cae1a;},'zOFqo':'ANDBAD-MD-V2','quDuG':'status@broadcast','YvLdt':function(_0x194665,_0x5303a8){return _0x194665(_0x5303a8);}};try{const _0x1c9ba4=new Date()['getTime'](),_0x4251f0=['🔥','⚡','🚀','💨','🎯','🎉','🌟','💥','🕐','🔹'],_0x1cfc60=['💎','🏆','⚡️','🚀','🎶','🌠','🌀','🔱',_0x2bf56c(0x11a),'✨'],_0x13d825=_0x4251f0[Math[_0x2bf56c(0x11c)](_0x2733b0[_0x2bf56c(0x114)](Math[_0x2bf56c(0x12b)](),_0x4251f0[_0x2bf56c(0x127)]))];let _0x1d08d7=_0x1cfc60[Math[_0x2bf56c(0x11c)](Math[_0x2bf56c(0x12b)]()*_0x1cfc60['length'])];while(_0x2733b0['pqnFC'](_0x1d08d7,_0x13d825)){_0x1d08d7=_0x1cfc60[Math['floor'](Math[_0x2bf56c(0x12b)]()*_0x1cfc60[_0x2bf56c(0x127)])];}await _0x373cdd['sendMessage'](_0x26b6ef,{'react':{'text':_0x1d08d7,'key':_0x9687ae['key']}});const _0x46fec2=new Date()[_0x2bf56c(0x11b)](),_0x42232d=_0x2733b0['lBDfr'](_0x46fec2,_0x1c9ba4)/0x3e8,_0x505031=_0x2bf56c(0x12e)+_0x42232d['toFixed'](0x2)+_0x2bf56c(0x129)+_0x13d825+'*';await _0x373cdd[_0x2bf56c(0x11e)](_0x26b6ef,{'text':_0x505031,'contextInfo':{'mentionedJid':[_0x199f63],'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0x2bf56c(0x11d),'newsletterName':_0x2733b0['zOFqo'],'serverMessageId':0x8f}}},{'quoted':{'key':{'fromMe':![],'participant':'0@s.whatsapp.net','remoteJid':_0x2733b0['quDuG']},'message':{'contactMessage':{'displayName':_0x2733b0['zOFqo'],'vcard':_0x2bf56c(0x110)}}}});}catch(_0x4c8c4e){console[_0x2bf56c(0x116)](_0x2bf56c(0x123),_0x4c8c4e),_0x2733b0['YvLdt'](_0x46f74f,_0x2bf56c(0x11f)+_0x4c8c4e['message']);}}),cmd({'pattern':'ping2','desc':_0x22456e(0x118),'category':_0x22456e(0x120),'react':'🍂','filename':__filename},async(_0x322e8f,_0x109d54,_0x44b128,{from:_0xf79fdf,quoted:_0x20c084,body:_0x354a29,isCmd:_0x482476,command:_0x211f4f,args:_0x1b6035,q:_0x25a449,isGroup:_0x2376d1,sender:_0x98a131,senderNumber:_0x4dd802,botNumber2:_0x17be00,botNumber:_0x3aadd0,pushname:_0x4788cd,isMe:_0x370630,isOwner:_0x5c78c7,groupMetadata:_0x98c2e9,groupName:_0xc16f24,participants:_0x55e1bb,groupAdmins:_0x3c28c0,isBotAdmins:_0x267adf,isAdmins:_0x3c4009,reply:_0x3ffe05})=>{const _0x257c4c=_0x22456e,_0x3fd886={'nOAID':function(_0x1e5e9a,_0x3c36ee){return _0x1e5e9a(_0x3c36ee);}};try{const _0x406261=Date[_0x257c4c(0x122)](),_0x52229a=await _0x322e8f['sendMessage'](_0xf79fdf,{'text':_0x257c4c(0x117)}),_0x34a4a6=Date['now'](),_0x1ad32c=_0x34a4a6-_0x406261;await _0x322e8f[_0x257c4c(0x11e)](_0xf79fdf,{'text':'*🔥\x20pong\x20:\x20'+_0x1ad32c+'ms*'},{'quoted':_0x52229a});}catch(_0x1924de){console['log'](_0x1924de),_0x3fd886['nOAID'](_0x3ffe05,''+_0x1924de);}});
+const config = require('../config');
+const { cmd, commands } = require('../command'); // Assuming this is the command handler
+
+// ======= PING COMMAND 1 =======
+cmd({
+    pattern: '.ping',
+    alias: ['.pong', 'ping2'],
+    use: 'main',
+    desc: "Check bot's response time.",
+    category: 'speed',
+    react: '⚡',
+    filename: __filename
+}, async (bot, message, args, { from, quoted, sender, reply }) => {
+    try {
+        const startTime = Date.now();
+
+        // Emoji arrays
+        const reactionEmojis = ['🔥', '⚡', '🚀', '💨', '🎯', '🎉', '🌟', '💥', '🕐', '🔹'];
+        const mainEmojis = ['💎', '🏆', '⚡️', '🚀', '🎶', '🌠', '🌀', '🔱', '🛡️', '✨'];
+
+        // Pick random emojis
+        const reactEmoji = reactionEmojis[Math.floor(Math.random() * reactionEmojis.length)];
+        let mainEmoji = mainEmojis[Math.floor(Math.random() * mainEmojis.length)];
+
+        // Ensure mainEmoji is not equal to reactEmoji
+        while (mainEmoji === reactEmoji) {
+            mainEmoji = mainEmojis[Math.floor(Math.random() * mainEmojis.length)];
+        }
+
+        // Send reaction to user
+        await bot.sendMessage(from, {
+            react: { text: mainEmoji, key: message.key }
+        });
+
+        const endTime = Date.now();
+        const latency = ((endTime - startTime) / 1000).toFixed(2); // seconds
+
+        // Send ping message with vCard contact
+        const pingMessage = `> *ANDBAD-MD-V2: ${latency}s ${reactEmoji}*`;
+        await bot.sendMessage(
+            from,
+            {
+                text: pingMessage,
+                contextInfo: {
+                    mentionedJid: [sender],
+                    forwardingScore: 1000,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363315949714553@newsletter',
+                        newsletterName: 'ANDBAD-MD-V2',
+                        serverMessageId: 143
+                    }
+                }
+            },
+            {
+                quoted: {
+                    key: { fromMe: false, participant: '0@s.whatsapp.net', remoteJid: 'status@broadcast' },
+                    message: {
+                        contactMessage: {
+                            displayName: 'ANDBAD-MD-V2',
+                            vcard: `BEGIN:VCARD
+VERSION:3.0
+N:ANDBAD-MD;BOT;;;
+FN:ANDBAD-MD
+item1.TEL;waid=255783394967:+255783394967
+item1.X-ABLabel:Bot
+END:VCARD`
+                        }
+                    }
+                }
+            }
+        );
+
+    } catch (error) {
+        console.log("Error in ping command:", error);
+        reply(`An error occurred: ${error.message}`);
+    }
+});
+
+// ======= PING COMMAND 2 =======
+cmd({
+    pattern: 'ping2',
+    desc: "Check bot's response time.",
+    category: 'speed',
+    react: '🍂',
+    filename: __filename
+}, async (bot, message, args, context) => {
+    try {
+        const start = Date.now();
+        const sentMessage = await bot.sendMessage(message.from, { text: '*PINGING...*' });
+        const end = Date.now();
+        const latency = end - start;
+
+        await bot.sendMessage(message.from, {
+            text: `*🔥 pong : ${latency}ms*`
+        }, { quoted: sentMessage });
+
+    } catch (error) {
+        console.log("Error in ping2 command:", error);
+        context.reply('' + error);
+    }
+});
