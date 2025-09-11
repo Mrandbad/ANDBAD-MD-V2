@@ -27,7 +27,7 @@ cmd({
     }
 
     // Fetch latest version data from GitHub
-    const rawVersionUrl = 'https://raw.githubusercontent.com/criss-vevo/CRISS-MD/main/data/version.json';
+    const rawVersionUrl = 'https://raw.githubusercontent.com/Mrandbad/CRISS-MD/main/data/version.json';
     let latestVersion = 'Unknown';
     let latestChangelog = 'No changelog available.';
     try {
@@ -53,12 +53,12 @@ cmd({
     const lastUpdate = fs.statSync(localVersionPath).mtime.toLocaleString();
 
     // GitHub stats
-    const githubRepo = 'https://github.com/criss-vevo/CRISS-AI';
+    const githubRepo = 'https://github.com/Mrandbad/CRISS-AI';
 
     // Check update status
-    let updateMessage = `✅ Your CRISS-AI bot is up-to-date!`;
+    let updateMessage = `✅ Your Andbad-md bot is up-to-date!`;
     if (localVersion !== latestVersion) {
-      updateMessage = `🚀 Your CRISS-AI bot is outdated!
+      updateMessage = `🚀 Your Andbad-md bot is outdated!
 🔹 *Current Version:* ${localVersion}
 🔹 *Latest Version:* ${latestVersion}
 
@@ -69,7 +69,7 @@ Use *.update* to update.`;
       `📌 *Bot Name:* CRISS-AI\n🔖 *Current Version:* ${localVersion}\n📢 *Latest Version:* ${latestVersion}\n📂 *Total Plugins:* ${pluginCount}\n🔢 *Total Commands:* ${totalCommands}\n\n` +
       `💾 *System Info:*\n⏳ *Uptime:* ${uptime}\n📟 *RAM Usage:* ${ramUsage}MB / ${totalRam}MB\n⚙️ *Host Name:* ${hostName}\n📅 *Last Update:* ${lastUpdate}\n\n` +
       `📝 *Changelog:*\n${latestChangelog}\n\n` +
-      `⭐ *GitHub Repo:* ${githubRepo}\n👤 *Owner:* [criss-vevo](https://github.com/criss-vevo)\n\n${updateMessage}\n\n🚀 *Hey! Don't forget to fork & star the repo!*`;
+      `⭐ *GitHub Repo:* ${githubRepo}\n👤 *Owner:* [Mrandbad](https://github.com/Mrandbad)\n\n${updateMessage}\n\n🚀 *Hey! Don't forget to fork & star the repo!*`;
 
     // Send the status message with an image
     await conn.sendMessage(from, {
@@ -80,8 +80,8 @@ Use *.update* to update.`;
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: 'CRISS AI',
+                        newsletterJid: '12036341759963@newsletter',
+                        newsletterName: 'ANDBAD MD',
                         serverMessageId: 143
         }
       }

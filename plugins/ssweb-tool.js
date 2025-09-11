@@ -31,14 +31,14 @@ async (conn, mek, m, {
     // give credit and use
     const imageMessage = {
       image: { url: screenshotUrl },
-      caption: "*WEB SS DOWNLOADER*\n\n> *© Powered By CRISS VEVO*",
+      caption: "*WEB SS DOWNLOADER*\n\n> *© Powered By Andbad*",
       contextInfo: {
         mentionedJid: [m.sender],
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363378608564635@newsletter',
-          newsletterName: "CRISS AI SUPPORT",
+          newsletterJid: '120363378608564@newsletter',
+          newsletterName: "andbad SUPPORT",
           serverMessageId: 143,
         },
       },
