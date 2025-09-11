@@ -76,27 +76,3 @@ END:VCARD`
         reply(`An error occurred: ${error.message}`);
     }
 });
-
-// ======= PING COMMAND 2 =======
-cmd({
-    pattern: 'ping2',
-    desc: "Check bot's response time.",
-    category: 'speed',
-    react: '🍂',
-    filename: __filename
-}, async (bot, message, args, context) => {
-    try {
-        const start = Date.now();
-        const sentMessage = await bot.sendMessage(message.from, { text: '*PINGING...*' });
-        const end = Date.now();
-        const latency = end - start;
-
-        await bot.sendMessage(message.from, {
-            text: `*🔥 pong : ${latency}ms*`
-        }, { quoted: sentMessage });
-
-    } catch (error) {
-        console.log("Error in ping2 command:", error);
-        context.reply('' + error);
-    }
-});
