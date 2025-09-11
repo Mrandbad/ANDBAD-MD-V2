@@ -66,44 +66,20 @@ const {
 
   
 
-  const sessionsFile = path.join(__dirname, 'sessions', 'creds.json');
-const sessionMapFile = path.join(__dirname, 'sessionMap.json'); // same as /pair
-
   //===================SESSION-AUTH============================
-if (!fs.existsSync(path.dirname(sessionsFile))) fs.mkdirSync(path.dirname(sessionsFile), { recursive: true });
-
-// Load session map
-let sessionMap = {};
-if (fs.existsSync(sessionMapFile)) {
-    sessionMap = JSON.parse(fs.readFileSync(sessionMapFile, "utf8"));
-}
-
-if (!fs.existsSync(sessionsFile)) {
-    if (!process.env.SESSION_ID) 
-        return console.log('Please add your session to SESSION_ID env !!');
-
-    const sessionID = process.env.SESSION_ID; // e.g., andbad-AbC123XyZ9
-    const pasteUrl = sessionMap?.[sessionID];
-
-    if (!pasteUrl) return console.log("Session ID not found in sessionMap!");
-
-    // Ensure it's raw Pastebin link
-    const rawUrl = pasteUrl.replace("pastebin.com/", "pastebin.com/raw/");
-
-    axios.get(rawUrl)
-        .then(res => {
-            fs.writeFileSync(sessionsFile, res.data, "utf8");
-            console.log("Session downloaded ✅");
-        })
-        .catch(err => {
-            console.error("Failed to download session:", err);
-        });
-}
+if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
+if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
+const sessdata = config.SESSION_ID.replace("njabulo-jb~", '');
+const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
+filer.download((err, data) => {
+if(err) throw err
+fs.writeFile(__dirname + '/sessions/creds.json', data, () => {
+console.log("Session downloaded ✅")
+})})}
 
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 9090;
-  
   //=============================================
   
   async function connectToWA() {
