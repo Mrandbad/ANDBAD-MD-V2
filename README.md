@@ -40,7 +40,7 @@
 
 Deploy your own instance of **𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2** quickly on Heroku:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Mrandbad/ANDBAD-MD-V2)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Mrandbad/ANDBAD-MD-V2)
 
 **Steps:**
 1. Click the **Deploy to Heroku** button above.  
