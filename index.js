@@ -63,21 +63,36 @@ const {
   
   // Clear the temp directory every 5 minutes
   setInterval(clearTempDir, 5 * 60 * 1000);
+
   
+
+  const sessionsFile = path.join(__dirname, 'sessions', 'creds.json');
+const sessionMapFile = path.join(__dirname, 'sessionMap.json'); // same as /pair
+
   //===================SESSION-AUTH============================
-if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
+if (!fs.existsSync(path.dirname(sessionsFile))) fs.mkdirSync(path.dirname(sessionsFile), { recursive: true });
+
+// Load session map
+let sessionMap = {};
+if (fs.existsSync(sessionMapFile)) {
+    sessionMap = JSON.parse(fs.readFileSync(sessionMapFile, "utf8"));
+}
+
+if (!fs.existsSync(sessionsFile)) {
     if (!process.env.SESSION_ID) 
         return console.log('Please add your session to SESSION_ID env !!');
 
     const sessionID = process.env.SESSION_ID; // e.g., andbad-AbC123XyZ9
+    const pasteUrl = sessionMap?.[sessionID];
 
-    // Get Pastebin URL from global.sessionMap
-    const pasteUrl = global.sessionMap?.[sessionID];
-    if (!pasteUrl) return console.log("Session ID not found!");
+    if (!pasteUrl) return console.log("Session ID not found in sessionMap!");
 
-    axios.get(pasteUrl)
+    // Ensure it's raw Pastebin link
+    const rawUrl = pasteUrl.replace("pastebin.com/", "pastebin.com/raw/");
+
+    axios.get(rawUrl)
         .then(res => {
-            fs.writeFileSync(__dirname + '/sessions/creds.json', res.data, 'utf8');
+            fs.writeFileSync(sessionsFile, res.data, "utf8");
             console.log("Session downloaded ✅");
         })
         .catch(err => {
