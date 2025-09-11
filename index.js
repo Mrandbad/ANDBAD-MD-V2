@@ -790,7 +790,7 @@ if (!isReact && senderNumber === botNumber) {
   }
   
   app.get("/", (req, res) => {
-  res.send("Njabulo 𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2 online 🟢");
+  res.send("𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2 online 🟢");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {

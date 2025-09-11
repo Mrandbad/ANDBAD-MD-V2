@@ -69,7 +69,7 @@ cmd({
             message: {
                 contactMessage: {
                     displayName: "ANDBAD-MD-V2",
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=255 783 394 967:+255 783 394 967\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:ANDBAD-MD;BOT;;;\nFN:ANDBAD-MD\nitem1.TEL;waid=255 783 394 967:+255 783 394 967\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
         } });
@@ -88,7 +88,7 @@ cmd({
             message: {
                 contactMessage: {
                     displayName: "ANDBAD-MD-V2",
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=255 783 394 967:+255 783 394 967\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:ANDBAD-MD;BOT;;;\nFN:ANDBAD-MD\nitem1.TEL;waid=255 783 394 967:+255 783 394 967\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
         } });
