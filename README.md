@@ -71,25 +71,24 @@ Copy code
 
 ## 🛠 Installation (Manual)
 
-```bash
+
 # Clone the repo
 git clone https://github.com/Mrandbad/ANDBAD-MD-V2.git
 cd ANDBAD-MD-V2
 
 # Install dependencies
 npm install
+__________________________________________
 
 # Start the bot
 node index.js
 Optional: Use PM2 for production deployment to keep your bot running 24/7:
-
-bash
 Copy code
 npm install pm2 -g
 pm2 start index.js --name "whatsapp-bot"
-📱 Screenshots
-<p align="center"> <img src="https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg" width="400" /> </p>
-💡 Contributing
+______________________________________
+
+#  💡 Contributing
 Contributions are welcome!
 
 Fork the repository
@@ -101,8 +100,10 @@ Commit your changes (git commit -am 'Add new feature')
 Push to the branch (git push origin feature-name)
 
 Open a Pull Request
+_______________________________________
 
-⚡ Support
+# ⚡ Support
 If you encounter any issues, open an Issue on GitHub or reach out via WhatsApp using the bot's pairing link.
+_______________________________________
 
-<p align="center">Made with ❤️ by 𝐀𝐍𝐃𝐑𝐄𝐖 𝐓𝐙</p> ```
+<p align="center">Made with ❤️ by 𝐀𝐍𝐃𝐑𝐄𝐖 𝐓𝐙</p>
