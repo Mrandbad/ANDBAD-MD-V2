@@ -76,7 +76,7 @@ cmd({
 
         // Send menu audio only once
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/5cxuyv.mp3' },
+            audio: { url: 'https://file.bwmxmd.online/bwmxmd_vz5uw.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,       
             }, { quoted: {
