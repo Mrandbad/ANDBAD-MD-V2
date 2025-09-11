@@ -40,13 +40,13 @@ cmd({
           forwardingScore: 999,
           isForwarded: true,
           externalAdReply: {
-            title: config.BOT_NAME || "CRISS-AI 🥀",
-            body: config.DESCRIPTION || "POWERED BY CRISS VEVO 🤌💗",
+            title: config.BOT_NAME || "𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2",
+            body: config.DESCRIPTION || "POWERED BY 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿",
             mediaType: 1,
             renderLargerThumbnail: true,
             thumbnail: thumbnailBuffer,
             mediaUrl: "https://files.catbox.moe/4ggu0a.jpg", // Static image URL
-            sourceUrl: "https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t",
+            sourceUrl: "https://whatsapp.com/channel/0029VajQn6YF1YlPE0XgBC2m",
             showAdAttribution: true
           }
         }
