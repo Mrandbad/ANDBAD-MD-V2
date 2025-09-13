@@ -47,15 +47,15 @@ async (conn, mek, m, { from, quoted, reply }) => {
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/4ggu0a.jpg` },
+                image: { url: `https://files.catbox.moe/a11gd7.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: 'CRISS AI',
+                        newsletterJid: '120363315949714553@newsletter',
+                        newsletterName: '𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2',
                         serverMessageId: 143
                     }
                 }
@@ -65,7 +65,7 @@ async (conn, mek, m, { from, quoted, reply }) => {
 
         // Send an audio file
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/9sb6x4.mpe' }, // Audio URL
+            audio: { url: 'https://files.catbox.moe/9sb6x4.mp3' }, // Audio URL
             mimetype: 'audio/mp4',
             ptt: true
         }, { quoted: mek });
