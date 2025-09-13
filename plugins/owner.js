@@ -43,7 +43,7 @@ END:VCARD
 ┃◈┃• *Version*: 2.0.0 Beta
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> © Power Of AndbadMD
+> © Power by 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿
             `.trim(),
             contextInfo: {
                 mentionedJid: [`${ownerNumber.replace('+', '')}@s.whatsapp.net`],
@@ -59,8 +59,8 @@ END:VCARD
 
         // Send audio (PTT style)
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/9sb6x4.mpe' },
-            mimetype: 'audio/mp4',
+            audio: { url: 'https://files.catbox.moe/9sb6x4.mp3' },
+            mimetype: 'audio/mp3',
             ptt: true
         }, { quoted: mek });
 
