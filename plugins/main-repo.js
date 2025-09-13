@@ -5,7 +5,7 @@ const { cmd } = require('../command');
 // Constants for better maintainability
 const GITHUB_REPO_URL = 'https://github.com/Mrandbad/ANDBAD-MD-V2';
 const DEFAULT_IMAGE_URL = 'https://files.catbox.moe/tvleub.jpg';
-const AUDIO_URL = 'https://files.bwmxmd.online/bwmxmd_mZv2e.mp3';
+const AUDIO_URL = 'https://files.bwmxmd.online/bwmxmd_mzv2e.mp3';
 const NEWSLETTER_INFO = {
   newsletterJid: '120363315949714553@newsletter',
   newsletterName: '𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰',
