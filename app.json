@@ -19,7 +19,7 @@
       "DELETE_LINKS": {
       "description": "remove links from group automatically without removing member",
       "required": false,
-      "value": "false"
+      "value": "true"
         
       }, 
 
@@ -40,7 +40,7 @@
     "WELCOME": {
       "description": "make it true if want goodbye and welcome message in groups.",
       "required": true,
-      "value": "true"
+      "value": "false"
    }, 
 
     "AUTO_STATUS_SEEN": {
