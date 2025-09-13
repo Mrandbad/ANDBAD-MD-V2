@@ -13,13 +13,13 @@ cmd({
     pattern: "play3",
     alias: ["mp3", "ytmp3"],
     react: "🎵",
-    desc: "Download Ytmp3",
+    desc: "Download YT as MP3",
     category: "download",
     use: ".song <Text or YT URL>",
     filename: __filename
 }, async (conn, m, mek, { from, q, reply }) => {
     try {
-        if (!q) return await reply("❌ Please provide a Query or Youtube URL!");
+        if (!q) return await reply("❌ Please provide a query or YouTube URL!");
 
         let id = q.startsWith("https://") ? replaceYouTubeID(q) : null;
 
@@ -32,9 +32,10 @@ cmd({
         const data = await dy_scrap.ytsearch(`https://youtube.com/watch?v=${id}`);
         if (!data?.results?.length) return await reply("❌ Failed to fetch video!");
 
-        const { url, title, image, timestamp, ago, views, author } = data.results[0];
+        const song = data.results[0]; // Correctly define song
+        const { url, title, image, timestamp, ago, views, author, downloadUrl } = song;
 
-        let info = `🍄 *𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁* 🍄\n\n` +
+        let info = `🍄 *SONG DOWNLOADER* 🍄\n\n` +
             `🎵 *Title:* ${title || "Unknown"}\n` +
             `⏳ *Duration:* ${timestamp || "Unknown"}\n` +
             `👀 *Views:* ${views || "Unknown"}\n` +
@@ -46,35 +47,31 @@ cmd({
             `1.2 *Document Type* 📁\n\n` +
             `${config.FOOTER || "𓆩CRISS AI𓆪"}`;
 
- await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
-            
-  await conn.sendMessage(from, {
-    audio: { url: data.result.downloadUrl },
-    mimetype: "audio/mpeg",
-    fileName: `${song.title}.mp3`,
-    contextInfo: {
-        externalAdReply: {
-            title: song.title.length > 25 ? `${song.title.substring(0, 22)}...` : song.title,
-            body: "Follow our WhatsApp Channel",
-            mediaType: 1,
-            thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
-            sourceUrl: 'https://whatsapp.com/channel/0029VajQn6YF1YlPE0XgBC2m',
-            mediaUrl: 'https://whatsapp.com/channel/0029VajQn6YF1YlPE0XgBC2m',
-            showAdAttribution: true,
-            renderLargerThumbnail: true
-        }
-    }
-}, { quoted: mek });
-            } catch (error) {
-                console.error(error);
-                await reply(`❌ *An error occurred while processing:* ${error.message || "Error!"}`);
+        // Send thumbnail + info
+        await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
+
+        // Send audio
+        await conn.sendMessage(from, {
+            audio: { url: downloadUrl },
+            mimetype: "audio/mpeg",
+            fileName: `${title}.mp3`,
+            contextInfo: {
+                externalAdReply: {
+                    title: title.length > 25 ? `${title.substring(0, 22)}...` : title,
+                    body: "Follow our WhatsApp Channel",
+                    mediaType: 1,
+                    thumbnailUrl: image,
+                    sourceUrl: 'https://whatsapp.com/channel/0029VajQn6YF1YlPE0XgBC2m',
+                    mediaUrl: 'https://whatsapp.com/channel/0029VajQn6YF1YlPE0XgBC2m',
+                    showAdAttribution: true,
+                    renderLargerThumbnail: true
+                }
             }
-        });
+        }, { quoted: mek });
 
     } catch (error) {
         console.error(error);
         await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
-        await reply(`❌ *An error occurred:* ${error.message || "Error!"}`);
+        await reply(`❌ *An error occurred:* ${error.message || "Unknown error"}`);
     }
 });
-                               
