@@ -5,7 +5,7 @@ const { cmd } = require('../command');
 // Constants for better maintainability
 const GITHUB_REPO_URL = 'https://github.com/Mrandbad/ANDBAD-MD-V2';
 const DEFAULT_IMAGE_URL = 'https://files.catbox.moe/tvleub.jpg';
-const AUDIO_URL = 'https://files.catbox.moe/9sb6x4.mpe';
+const AUDIO_URL = 'https://files.catbox.moe/9sb6x4.mp3';
 const NEWSLETTER_INFO = {
   newsletterJid: '120363315949714553@newsletter',
   newsletterName: '𝚫𝚴𝐃𝚩𝚫𝐃 𝚫𝚰',
@@ -61,7 +61,7 @@ const formatRepoInfo = (repoData) => {
          `*GITHUB LINK:*\n> ${repoData.html_url}\n\n` +
          `*DESCRIPTION:*\n> ${repoData.description || 'No description'}\n\n` +
          `*Don't Forget To Star and Fork Repository*\n\n` +
-         `> *© Powered By andbad v2 🖤*`;
+         `> *© Powered By 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿*`;
 };
 
 /*
