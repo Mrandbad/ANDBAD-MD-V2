@@ -16,7 +16,7 @@ cmd({
             react: { text: '⏳', key: mek.key }
         });
 
-        const menuCaption = `╭━━━〔 *ANDBAD-MD-V2* 〕━━━┈⊷
+        const menuCaption = `╭━━━〔 *𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2* 〕━━━┈⊷
 ┃★╭──────────────
 ┃★│ 👑 *Owner :* ${config.OWNER_NAME}
 ┃★│ 🤖 *Baileys :* Multi Device
@@ -68,7 +68,7 @@ cmd({
             },
             message: {
                 contactMessage: {
-                    displayName: "ANDBAD-MD-V2",
+                    displayName: "𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:ANDBAD-MD;BOT;;;\nFN:ANDBAD-MD\nitem1.TEL;waid=255 783 394 967:+255 783 394 967\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
@@ -76,7 +76,7 @@ cmd({
 
         // Send menu audio only once
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/9sb6x4.mpe' },
+            audio: { url: 'https://files.catbox.moe/9sb6x4.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,       
             }, { quoted: {
@@ -87,7 +87,7 @@ cmd({
             },
             message: {
                 contactMessage: {
-                    displayName: "ANDBAD-MD-V2",
+                    displayName: "𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:ANDBAD-MD;BOT;;;\nFN:ANDBAD-MD\nitem1.TEL;waid=255 783 394 967:+255 783 394 967\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
