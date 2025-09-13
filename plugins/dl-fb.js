@@ -41,7 +41,7 @@ cmd({
     let videoUrl = data.url;
     await conn.sendMessage(from, {
       video: { url: videoUrl },
-      caption: "📥 *Facebook Video Downloaded*\n\n- *Power of AndbadMD ✅*",
+      caption: "📥 *Facebook Video Downloaded*\n\n- *Power by 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿*",
       fileName: "fb.mp4",
       mimetype: "video/mp4"
     }, { quoted: m });
