@@ -12,7 +12,7 @@ const NEWSLETTER_INFO = {
   serverMessageId: 143
 };
 
-/**
+/*
  * Extracts username and repository name from GitHub URL
  * @param {string} url - GitHub repository URL
  * @returns {Object} Object containing username and repo
