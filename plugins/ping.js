@@ -1,20 +1,21 @@
 const config = require('../config');
-const { cmd, commands } = require('../command'); // Assuming this is the command handler
+const { cmd } = require('../command');
 
-// ======= PING COMMAND 1 =======
+// ======= PING COMMAND =======
 cmd({
-    pattern: 'ping',
-    alias: ['pong', 'ping2'],
-    use: 'main',
+    pattern: "ping",
+    alias: ["pong", "ping2"],
+    use: "main",
     desc: "Check bot's response time.",
-    category: 'speed',
-    react: '⚡',
+    category: "speed",
+    react: "⚡",
     filename: __filename
-}, async (bot, message, args, { from, quoted, sender, reply }) => {
+}, 
+async (bot, message, args, { from, quoted, sender, reply }) => {
     try {
         const startTime = Date.now();
 
-        // Emoji arrays
+        // Emoji sets
         const reactionEmojis = ['🔥', '⚡', '🚀', '💨', '🎯', '🎉', '🌟', '💥', '🕐', '🔹'];
         const mainEmojis = ['💎', '🏆', '⚡️', '🚀', '🎶', '🌠', '🌀', '🔱', '🛡️', '✨'];
 
@@ -22,21 +23,27 @@ cmd({
         const reactEmoji = reactionEmojis[Math.floor(Math.random() * reactionEmojis.length)];
         let mainEmoji = mainEmojis[Math.floor(Math.random() * mainEmojis.length)];
 
-        // Ensure mainEmoji is not equal to reactEmoji
+        // Ensure mainEmoji != reactEmoji
         while (mainEmoji === reactEmoji) {
             mainEmoji = mainEmojis[Math.floor(Math.random() * mainEmojis.length)];
         }
 
-        // Send reaction to user
+        // React to user message
         await bot.sendMessage(from, {
             react: { text: mainEmoji, key: message.key }
         });
 
-        const endTime = Date.now();
-        const latency = ((endTime - startTime) / 1000).toFixed(2); // seconds
+        const latency = ((Date.now() - startTime) / 1000).toFixed(2); // seconds
 
-        // Send ping message with vCard contact
-        const pingMessage = `> *ANDBAD-MD-V2: ${latency}s ${reactEmoji}*`;
+        // Styled ping response
+        const pingMessage = `
+╭━━━〔 *⚡ PING STATUS ⚡* 〕━━━┈⊷
+┃◈ *Bot:* ANDBAD-MD-V2
+┃◈ *Speed:* ${latency}s ${reactEmoji}
+┃◈ *User:* @${sender.split('@')[0]}
+╰━━━━━━━━━━━━━━┈⊷
+        `.trim();
+
         await bot.sendMessage(
             from,
             {
@@ -54,17 +61,23 @@ cmd({
             },
             {
                 quoted: {
-                    key: { fromMe: false, participant: '0@s.whatsapp.net', remoteJid: 'status@broadcast' },
+                    key: {
+                        fromMe: false,
+                        participant: "0@s.whatsapp.net",
+                        remoteJid: "status@broadcast"
+                    },
                     message: {
                         contactMessage: {
-                            displayName: 'ANDBAD-MD-V2',
-                            vcard: `BEGIN:VCARD
+                            displayName: "ANDBAD-MD-V2",
+                            vcard: `
+BEGIN:VCARD
 VERSION:3.0
 N:ANDBAD-MD;BOT;;;
 FN:ANDBAD-MD
 item1.TEL;waid=255783394967:+255783394967
 item1.X-ABLabel:Bot
-END:VCARD`
+END:VCARD
+                            `.trim()
                         }
                     }
                 }
@@ -72,7 +85,7 @@ END:VCARD`
         );
 
     } catch (error) {
-        console.log("Error in ping command:", error);
-        reply(`An error occurred: ${error.message}`);
+        console.error("Error in ping command:", error);
+        reply(`❌ An error occurred: ${error.message}`);
     }
 });
