@@ -14,13 +14,8 @@ cmd({
 ╭───〔 *${config.BOT_NAME} - DONATE* 〕───◉
 │💖 Thank you for supporting me!
 │
-│📲 *M-Pesa:* ${config.YAS_NUMBER || "
-> Yas/ tigo
-`BINASA MNUNGU`
-*0672334740*
-
-`_LIPIA USISAHAU SCREENSHOT muhimu_`"}
-│💳 *Bank Account:* ${config.BANK_ACCOUNT || "Not Available"}
+│📲 *MIX-YAS:* ${config.YAS_NUMBER || "0672334740"}
+│💳 *Account Name:* ${config.NAME_ACCOUNT || "BINASA ALIMINI MNUNGU"}
 │🌐 *PayPal:* ${config.PAYPAL_EMAIL || "Not Available"}
 │
 │🙏 Every donation helps keep the bot running and updated!
@@ -49,4 +44,5 @@ cmd({
         reply("❌ An error occurred while fetching donation details.");
     }
 });
+
 
