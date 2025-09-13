@@ -38,7 +38,7 @@ cmd({
         await conn.sendMessage(from, {
             image: { url: config.MENU_IMAGE_URL },
             caption: status,
-            footer: "© Power Of AndbadMD",
+            footer: "© Power by 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿",
             buttons: buttons,
             headerType: 4 // 4 = image with buttons
         }, { quoted: mek });
@@ -49,4 +49,5 @@ cmd({
         reply("❌ An error occurred while processing your request.");
     }
 });
+
 
