@@ -49,3 +49,4 @@ cmd({
         reply("❌ An error occurred while processing your request.");
     }
 });
+
