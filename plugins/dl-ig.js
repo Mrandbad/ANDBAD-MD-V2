@@ -31,7 +31,7 @@ cmd({
         video: { url: media.url },
         fileName: "instagram.mp4",
         mimetype: "video/mp4",
-        caption: "📥 *Instagram Media Downloaded*\n\n- *Power of AndbadMD ✅*"
+        caption: "📥 *Instagram Media Downloaded*\n\n- *Power by 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿*"
       }, { quoted: m });
 
       // Success reaction
@@ -44,3 +44,4 @@ cmd({
     await conn.sendMessage(from, { react: { text: "❌", key: m.key } });
   }
 });
+
