@@ -30,7 +30,7 @@ const extractRepoInfo = (url) => {
   };
 };
 
-/**
+/*
  * Fetches repository data from GitHub API
  * @param {string} username - GitHub username
  * @param {string} repoName - Repository name
@@ -48,7 +48,7 @@ const fetchRepoData = async (username, repoName) => {
   return response.json();
 };
 
-/**
+/*
  * Formats repository information into a readable string
  * @param {Object} repoData - GitHub repository data
  * @returns {string} Formatted information string
@@ -64,7 +64,7 @@ const formatRepoInfo = (repoData) => {
          `> *© Powered By andbad v2 🖤*`;
 };
 
-/**
+/*
  * Creates context info for messages
  * @param {string} senderJid - Sender JID to mention
  * @returns {Object} Context info object
