@@ -29,7 +29,7 @@ cmd({
         fs.writeFileSync("./lib/ban.json", JSON.stringify([...new Set(banned)], null, 2));
 
         await conn.sendMessage(from, {
-            image: { url: "https://files.catbox.moe/j67u2n.jpg" },
+            image: { url: "https://file.bwmxmd.online/bwmxmd_6ul7n.jpeg" },
             caption: `⛔ User has been banned from using the bot.`
         }, { quoted: mek });
 
