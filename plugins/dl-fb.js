@@ -1,4 +1,4 @@
-const axios = require("axios");
+const { igdl } = require('ruhend-scraper')
 const { cmd } = require("../command");
 
 cmd({
@@ -15,27 +15,43 @@ cmd({
       return reply("*`Need a valid Facebook URL`*\n\nExample: `.fb https://www.facebook.com/...`");
     }
 
-    // Add a loading react
+    // Add loading reaction
     await conn.sendMessage(from, { react: { text: '⏳', key: m.key } });
 
-    // Fetch video URL from the API
-    const apiUrl = `https://www.velyn.biz.id/api/downloader/facebookdl?url=${encodeURIComponent(q)}`;
-    const { data } = await axios.get(apiUrl);
-
-    // Check if the API response is valid
-    if (!data.status || !data.data || !data.data.url) {
-      return reply("❌ Failed to fetch the video. Please try another link.");
+    // Fetch video data
+    let res;
+    try {
+      res = await igdl(q);
+    } catch (e) {
+      return reply("❌ Failed to fetch data. Please check the link.");
     }
 
-    // Send the video to the user
-    const videoUrl = data.data.url;
+    let result = res.data;
+    if (!result || result.length === 0) {
+      return reply("❌ No results found.");
+    }
+
+    // Prefer 720p > fallback 360p
+    let data = result.find(i => i.resolution === "720p (HD)") || result.find(i => i.resolution === "360p (SD)");
+    if (!data) {
+      return reply("❌ No suitable resolution found.");
+    }
+
+    // Send the video
+    let videoUrl = data.url;
     await conn.sendMessage(from, {
       video: { url: videoUrl },
       caption: "📥 *Facebook Video Downloaded*\n\n- *Power of AndbadMD ✅*",
+      fileName: "fb.mp4",
+      mimetype: "video/mp4"
     }, { quoted: m });
 
+    // Success reaction
+    await conn.sendMessage(from, { react: { text: '✅', key: m.key } });
+
   } catch (error) {
-    console.error("Error:", error); // Log the error for debugging
+    console.error("Error:", error);
     reply("❌ Error fetching the video. Please try again.");
+    await conn.sendMessage(from, { react: { text: '❌', key: m.key } });
   }
 });
