@@ -14,7 +14,12 @@ cmd({
 ╭───〔 *${config.BOT_NAME} - DONATE* 〕───◉
 │💖 Thank you for supporting me!
 │
-│📲 *M-Pesa:* ${config.MPESA_NUMBER || "Not Available"}
+│📲 *M-Pesa:* ${config.YAS_NUMBER || "
+> Yas/ tigo
+`BINASA MNUNGU`
+*0672334740*
+
+`_LIPIA USISAHAU SCREENSHOT muhimu_`"}
 │💳 *Bank Account:* ${config.BANK_ACCOUNT || "Not Available"}
 │🌐 *PayPal:* ${config.PAYPAL_EMAIL || "Not Available"}
 │
@@ -33,7 +38,7 @@ cmd({
         await conn.sendMessage(from, {
             image: { url: config.MENU_IMAGE_URL }, // optional image
             caption: donateMessage,
-            footer: "© Power Of AndbadMD",
+            footer: "© Power by 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿",
             buttons: buttons,
             headerType: 4 // image + buttons
         }, { quoted: mek });
@@ -44,3 +49,4 @@ cmd({
         reply("❌ An error occurred while fetching donation details.");
     }
 });
+
