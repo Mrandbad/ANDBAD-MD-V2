@@ -31,7 +31,7 @@ cmd({
       video: { url: videoURL },
       fileName: "tiktok.mp4",
       mimetype: "video/mp4",
-      caption: "📥 *TikTok Video Downloaded*\n\n- *Power of AndbadMD ✅*"
+      caption: "📥 *TikTok Video Downloaded*\n\n- *Power by 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿*"
     }, { quoted: m });
 
     // Success reaction
