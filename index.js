@@ -71,6 +71,7 @@ if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
     if (!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!');
 
     const sessData = config.SESSION_ID; // use session ID as-is
+    const sessdata = config.SESSION_ID.replace("Andbad~", '');
     const file = File.fromURL(`https://mega.nz/file/${sessData}`);
 
     file.loadAttributes().then(() => {
