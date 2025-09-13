@@ -3,8 +3,8 @@ const { cmd, commands } = require('../command'); // Assuming this is the command
 
 // ======= PING COMMAND 1 =======
 cmd({
-    pattern: '.ping',
-    alias: ['.pong', 'ping2'],
+    pattern: 'ping',
+    alias: ['pong', 'ping2'],
     use: 'main',
     desc: "Check bot's response time.",
     category: 'speed',
