@@ -39,19 +39,19 @@ ${truncatedCode}
 \`\`\`
 ╰──────────⊷  
 ⚡ Full file sent below 📂  
-Powered By *CRISS AI* 💜`;
+Powered By *𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿* 💜`;
 
         // Send image with truncated source code
         await conn.sendMessage(from, { 
-            image: { url: `https://files.catbox.moe/4ggu0a.jpg` },
+            image: { url: `https://files.catbox.moe/a11gd7.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: 'CRISS AI',
+                        newsletterJid: '120363315949714553@newsletter',
+                        newsletterName: '𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2',
                         serverMessageId: 143
                 }
             }
