@@ -29,7 +29,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                 caption: `
 *📄 PDF created successully!*
 
-> © Created By CRISS AI 💜`
+> © Created By andbad 💜`
             }, { quoted: mek });
         });
 
