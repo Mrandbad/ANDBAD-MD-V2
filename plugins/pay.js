@@ -1,6 +1,6 @@
 const { cmd } = require('../command');
 const config = require('../config');
-
+const johso = "https://files.catbox.moe/bhtyyr.jpg"
 cmd({
     pattern: "donate",
     alias: ["support", "pay", "donation"],
@@ -31,7 +31,7 @@ cmd({
         ];
 
         await conn.sendMessage(from, {
-            image: { url: config.MENU_IMAGE_URL }, // optional image
+            image: { url: johso }, // optional image
             caption: donateMessage,
             footer: "© Power by 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿",
             buttons: buttons,
