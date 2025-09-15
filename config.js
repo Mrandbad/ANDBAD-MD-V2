@@ -38,7 +38,7 @@ CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️�
 // chose custom react emojis by yourself 
 DELETE_LINKS: process.env.DELETE_LINKS || "true",
 // automatic delete links witho remove member 
-OWNER_NUMBER: process.env.OWNER_NUMBER || "255783394967",
+OWNER_NUMBER: process.env.OWNER_NUMBER || "255792863105",
 // add your bot owner number
 OWNER_NAME: process.env.OWNER_NAME || "ANDREWTZ🇹🇿",
 // add bot owner name
@@ -72,7 +72,7 @@ AUTO_TYPING: process.env.AUTO_TYPING || "false",
 // true for automatic show typing   
 READ_CMD: process.env.READ_CMD || "false",
 // true if want mark commands as read 
-DEV: process.env.DEV || "255783394967",
+DEV: process.env.DEV || "255792863105",
 //replace with your whatsapp number        
 ANTI_VV: process.env.ANTI_VV || "true",
 // true for anti once view 
