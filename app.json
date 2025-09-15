@@ -53,6 +53,18 @@
       "required": false,
       "value": "true"
       
+    },
+
+    "AUT0_TYPING": {
+      "description": "mod of typing when receive sms",
+      "required": false,
+      "value": "true"
+    },
+    
+    "PREFIX": {
+      "description": "custome prefix to be used",
+      "required": true,
+      "value": "."
     }
 
 },
