@@ -14,11 +14,6 @@ async (conn, mek, m, {
     // Check if the command is used in a group
     if (!isGroup) return reply("❌ This command can only be used in groups.");
 
-    // Get the bot owner's number dynamically from conn.user.id
-    const botOwner = conn.user.id.split(":")[0];
-    if (senderNumber !== botOwner) {
-        return reply("❌ Only the bot owner can use this command.");
-    }
 
     // Check if the bot is an admin
     if (!isBotAdmins) return reply("❌ I need to be an admin to use this command.");
