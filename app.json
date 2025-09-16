@@ -65,8 +65,12 @@
       "description": "custome prefix to be used",
       "required": true,
       "value": "."
-    }
+    }, 
 
+    "AUTO_STATUS_MSG": {
+      "description": "auto view status", 
+      "required": true, 
+      "value" : "Your status have viewed successfully by ANDREW-TZ", 
 },
 
      "buildpacks": [
