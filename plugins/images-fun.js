@@ -23,7 +23,7 @@ try{
 let res = await axios.get('https://api.lolicon.app/setu/v2?num=1&r18=0&tag=lolicon')
 let wm = `😎 Random Garl image
 
-©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴀɪ`
+©𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`
 await conn.sendMessage(from, { image: { url: res.data.data[0].urls.original }, caption: wm}, { quoted: mek })
 } catch (e) {
 reply(cants)
