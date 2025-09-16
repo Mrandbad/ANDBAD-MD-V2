@@ -1,4 +1,3 @@
-const config = require('../config');
 const { cmd } = require('../command');
 
 cmd({
@@ -15,17 +14,23 @@ async (conn, mek, m, {
     // Check if the command is used in a group
     if (!isGroup) return reply("❌ This command can only be used in groups.");
 
-    // Check if sender is owner from config.js
-    if (senderNumber !== config.OWNER_NUMBER) {
-        return reply("❌ Only the bot owner can use this command.");
+    // ✅ Check if sender is admin
+    const senderJid = senderNumber + "@s.whatsapp.net";
+    const senderIsAdmin = groupMetadata.participants
+        .filter(p => p.admin)
+        .map(p => p.id)
+        .includes(senderJid);
+
+    if (!senderIsAdmin) {
+        return reply("❌ Only group admins can use this command.");
     }
 
-    // ✅ Detect bot’s JID properly
+    // ✅ Check if bot is admin
     const botNumber = conn.user.id.split(":")[0] + "@s.whatsapp.net";
     const botIsAdmin = groupMetadata.participants
-        .filter(p => p.admin) // all admins
-        .map(p => p.id)       // map to JIDs
-        .includes(botNumber); // check if bot is admin
+        .filter(p => p.admin)
+        .map(p => p.id)
+        .includes(botNumber);
 
     if (!botIsAdmin) {
         return reply("❌ I need to be an admin to use this command.");
