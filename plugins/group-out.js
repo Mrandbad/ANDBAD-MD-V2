@@ -1,3 +1,4 @@
+const config = require('../config');
 const { cmd } = require('../command');
 
 cmd({
@@ -9,14 +10,26 @@ cmd({
     filename: __filename
 },
 async (conn, mek, m, {
-    from, q, isGroup, isBotAdmins, reply, groupMetadata, senderNumber
+    from, q, isGroup, reply, groupMetadata, senderNumber
 }) => {
     // Check if the command is used in a group
     if (!isGroup) return reply("❌ This command can only be used in groups.");
 
+    // Check if sender is owner from config.js
+    if (senderNumber !== config.OWNER_NUMBER) {
+        return reply("❌ Only the bot owner can use this command.");
+    }
 
-    // Check if the bot is an admin
-    if (!isBotAdmins) return reply("❌ I need to be an admin to use this command.");
+    // ✅ Detect bot’s JID properly
+    const botNumber = conn.user.id.split(":")[0] + "@s.whatsapp.net";
+    const botIsAdmin = groupMetadata.participants
+        .filter(p => p.admin) // get all admins
+        .map(p => p.id)       // map to IDs
+        .includes(botNumber); // check if bot’s JID is in admins
+
+    if (!botIsAdmin) {
+        return reply("❌ I need to be an admin to use this command.");
+    }
 
     if (!q) return reply("❌ Please provide a country code. Example: .out 92");
 
@@ -26,7 +39,7 @@ async (conn, mek, m, {
     }
 
     try {
-        const participants = await groupMetadata.participants;
+        const participants = groupMetadata.participants;
         const targets = participants.filter(
             participant => participant.id.startsWith(countryCode) && 
                          !participant.admin // Don't remove admins
