@@ -1,91 +1,69 @@
-
-
 {
   "name": "ANDBAD-MD-V2",
   "description": "Javascript WhatsApp bot made by 𝚫𝚴𝐃𝚩𝚫𝐃",
   "keywords": ["ANDBAD-MD-V2"],
   "success_url": "/",
-
-    "stack": "container",
   "env": {
     "SESSION_ID": {
       "description": "Put the session-id here.",
       "required": true,
       "value": ""
-      
-      },
-
-      "DELETE_LINKS": {
-      "description": "remove links from group automatically without removing member",
+    },
+    "DELETE_LINKS": {
+      "description": "Remove links from group automatically without removing member",
       "required": false,
       "value": "true"
-        
-      }, 
-
+    },
     "ANTI_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
       "required": true,
       "value": "true"
-      
     },
-
-     "ANTI_LINK_KICK": {
+    "ANTI_LINK_KICK": {
       "description": "Make it true if you want bot auto remove group link.",
       "required": true,
       "value": "false"
-       
-      },
-
+    },
     "WELCOME": {
-      "description": "make it true if want goodbye and welcome message in groups.",
+      "description": "Make it true if you want goodbye and welcome message in groups.",
       "required": true,
       "value": "false"
-   }, 
-
+    },
     "AUTO_STATUS_SEEN": {
       "description": "Make it true for automatic status seen.",
       "required": false,
       "value": "true"
-    }, 
-
+    },
     "AUTO_STATUS_REACT": {
-      "description": "make it true for automatic status reaction or like.",
-      "required": false,
-      "value": "true"
-      
-    },
-
-    "AUT0_TYPING": {
-      "description": "mod of typing when receive sms",
+      "description": "Make it true for automatic status reaction or like.",
       "required": false,
       "value": "true"
     },
-    
+    "AUTO_TYPING": {
+      "description": "Mode of typing when receiving sms",
+      "required": false,
+      "value": "true"
+    },
     "PREFIX": {
-      "description": "custome prefix to be used",
+      "description": "Custom prefix to be used",
       "required": true,
       "value": "."
-    }, 
-
+    },
     "AUTO_STATUS_MSG": {
-      "description": "auto view status", 
-      "required": true, 
-      "value" : "Your status have viewed successfully by ANDREW-TZ", 
-    }'
-
+      "description": "Auto view status",
+      "required": true,
+      "value": "Your status has been viewed successfully by ANDREW-TZ"
+    },
     "AUTO_STATUS_REPLY": {
-      "description": "status reply function",
+      "description": "Status reply function",
       "required": false,
-      "value": "true"'
+      "value": "true"
     }
-
-  }      
-
-     "buildpacks": [
-        {
-            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
-        }
-     ],
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ],
   "stack": "heroku-24"
 }
-  
