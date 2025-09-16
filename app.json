@@ -71,6 +71,12 @@
       "description": "auto view status", 
       "required": true, 
       "value" : "Your status have viewed successfully by ANDREW-TZ", 
+    }'
+
+    "AUTO_STATUS_REPLY": {
+      "description": "status reply function",
+      "required": false,
+      "value": "true"'
     }
 
   }      
