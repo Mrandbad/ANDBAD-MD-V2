@@ -1,6 +1,6 @@
 const { cmd } = require('../command');
 const config = require('../config');
-const johso = "https://files.catbox.moe/bhtyyr.jpg"
+const johso = "https://files.catbox.moe/0tj2vw.jpg"
 cmd({
     pattern: "donate",
     alias: ["support", "pay", "donation"],
@@ -14,7 +14,7 @@ cmd({
 ╭───〔 *${config.BOT_NAME} - DONATE* 〕───◉
 │💖 Thank you for supporting me!
 │
-│📲 *MIX-YAS:* ${config.YAS_NUMBER || "*0672334740*"}
+│📲 *MIX-YAS-LIPA-NUMBER:* ${config.YAS_LIPA_NUMBER || "*15618169*"}
 │💳 *Account Name:* ${config.NAME_ACCOUNT || "*BINASA ALIMINI MNUNGU*"}
 │🌐 *PayPal:* ${config.PAYPAL_EMAIL || "Not Available"}
 │
@@ -33,7 +33,7 @@ cmd({
         await conn.sendMessage(from, {
             image: { url: johso }, // optional image
             caption: donateMessage,
-            footer: "© Power by 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿",
+            footer: "©𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿",
             buttons: buttons,
             headerType: 4 // image + buttons
         }, { quoted: mek });
@@ -44,6 +44,7 @@ cmd({
         reply("❌ An error occurred while fetching donation details.");
     }
 });
+
 
 
 
