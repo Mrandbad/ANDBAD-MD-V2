@@ -21,7 +21,7 @@ cmd(
                 ? `${sender} is crying over @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is crying!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/cry";
             let res = await axios.get(apiUrl);
@@ -61,7 +61,7 @@ cmd(
                 ? `${sender} cuddled @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is cuddling everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/cuddle";
             let res = await axios.get(apiUrl);
@@ -101,7 +101,7 @@ cmd(
                 ? `${sender} is bullying @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is bullying everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> ©𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/bully";
             let res = await axios.get(apiUrl);
@@ -141,7 +141,7 @@ cmd(
                 ? `${sender} hugged @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is hugging everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/hug";
             let res = await axios.get(apiUrl);
@@ -182,7 +182,7 @@ cmd(
                 ? `${sender} awoos at @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is awooing everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/awoo";
             let res = await axios.get(apiUrl);
@@ -257,7 +257,7 @@ cmd(
                 ? `${sender} patted @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is patting everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/pat";
             let res = await axios.get(apiUrl);
@@ -337,7 +337,7 @@ cmd(
                 ? `${sender} bonked @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is bonking everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿;
 
             const apiUrl = "https://api.waifu.pics/sfw/bonk";
             let res = await axios.get(apiUrl);
@@ -378,7 +378,7 @@ cmd(
                 ? `${sender} yeeted @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is yeeting everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> ©𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/yeet";
             let res = await axios.get(apiUrl);
@@ -418,7 +418,7 @@ cmd(
                 ? `${sender} is blushing at @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is blushing!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿;
 
             const apiUrl = "https://api.waifu.pics/sfw/blush";
             let res = await axios.get(apiUrl);
@@ -458,7 +458,7 @@ cmd(
                 ? `${sender} is holding hands with @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} wants to hold hands with everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/handhold";
             let res = await axios.get(apiUrl);
@@ -499,7 +499,7 @@ cmd(
                 ? `${sender} gave a high-five to @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is high-fiving everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/highfive";
             let res = await axios.get(apiUrl);
@@ -539,7 +539,7 @@ cmd(
                 ? `${sender} is nomming @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is nomming everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/nom";
             let res = await axios.get(apiUrl);
@@ -579,7 +579,7 @@ cmd(
                 ? `${sender} waved at @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is waving at everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/wave";
             let res = await axios.get(apiUrl);
@@ -619,7 +619,7 @@ cmd(
                 ? `${sender} smiled at @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is smiling at everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/smile";
             let res = await axios.get(apiUrl);
@@ -659,7 +659,7 @@ cmd(
                 ? `${sender} winked at @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is winking at everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/wink";
             let res = await axios.get(apiUrl);
@@ -699,7 +699,7 @@ cmd(
                 ? `${sender} is happy with @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is happy with everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/happy";
             let res = await axios.get(apiUrl);
@@ -739,7 +739,7 @@ cmd(
                 ? `${sender} glomped @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is glomping everyone!`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/glomp";
             let res = await axios.get(apiUrl);
@@ -819,7 +819,7 @@ cmd(
                 ? `${sender} poked @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} poked everyone`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/poke";
             let res = await axios.get(apiUrl);
@@ -860,7 +860,7 @@ cmd(
                 ? `${sender} thinks @${mentionedUser.split("@")[0]} is cringe`
                 : isGroup
                 ? `${sender} finds everyone cringe`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/cringe";
             let res = await axios.get(apiUrl);
@@ -901,7 +901,7 @@ cmd(
                 ? `${sender} danced with @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is dancing with everyone`
-                : `> © Powered By CAndbad 🖤`;
+                : `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
 
             const apiUrl = "https://api.waifu.pics/sfw/dance";
             let res = await axios.get(apiUrl);
@@ -946,7 +946,7 @@ cmd(
             } else if (isGroup) {
                 message = `${sender} killed everyone`;
             } else {
-                message = `> © Powered By CAndbad 🖤`;
+                message = `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿;
             }
 
             const apiUrl = "https://api.waifu.pics/sfw/kill";
@@ -990,7 +990,7 @@ cmd(
             } else if (isGroup) {
                 message = `${sender} slapped everyone`;
             } else {
-                message = `> © Powered By CAndbad 🖤`;
+                message = `> © 𝚸𝚯𝐖𝚵𝚪 𝚩𝐘 𝚫𝚴𝐃𝚪𝚵𝐖-𝚻𝚭🇹🇿`;
             }
 
             const apiUrl = "https://api.waifu.pics/sfw/slap";
