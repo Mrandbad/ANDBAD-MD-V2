@@ -3,7 +3,7 @@ const { sleep } = require("../lib/functions");
 
 cmd({  
     pattern: "restart",  
-    desc: "Restart CRISS-AI",  
+    desc: "Restart 𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2",  
     category: "owner",  
     filename: __filename  
 },  
