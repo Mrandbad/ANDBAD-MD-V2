@@ -33,7 +33,7 @@ cmd({
 
     // Create the response message
     const message = `
-*CRISS-AI NPM SEARCH*
+*𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2 NPM SEARCH*
 
 *🔰 NPM PACKAGE:* ${packageName}
 *📄 DESCRIPTION:* ${description}
