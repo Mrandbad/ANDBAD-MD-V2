@@ -53,7 +53,7 @@ cmd({
     const lastUpdate = fs.statSync(localVersionPath).mtime.toLocaleString();
 
     // GitHub stats
-    const githubRepo = 'https://github.com/Mrandbad/CRISS-AI';
+    const githubRepo = 'https://github.com/Mrandbad/ANDBAD-MD-V2';
 
     // Check update status
     let updateMessage = `✅ Your Andbad-md bot is up-to-date!`;
@@ -80,8 +80,8 @@ Use *.update* to update.`;
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '12036341759963@newsletter',
-                        newsletterName: 'ANDBAD MD',
+                        newsletterJid: '120363315949714553@newsletter',
+                        newsletterName: '𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2',
                         serverMessageId: 143
         }
       }
