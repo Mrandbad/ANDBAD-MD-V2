@@ -12,7 +12,7 @@ cmd({
     const response = await axios.get("https://api.quotable.io/random");
     const { content, author } = response.data;
 
-    const message = `💬 *"${content}"*\n- ${author}\n\n> *QUOTES BY CRISS AI*`;
+    const message = `💬 *"${content}"*\n- ${author}\n\n> *QUOTES BY 𝐀𝐍𝐃𝐑𝐄𝐖-𝐓𝐙🇹🇿*`;
     reply(message);
   } catch (error) {
     console.error("Error fetching quote:", error);
