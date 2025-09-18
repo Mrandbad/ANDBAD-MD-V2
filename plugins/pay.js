@@ -1,6 +1,6 @@
 const { cmd } = require('../command');
 const config = require('../config');
-const johso = "https://files.catbox.moe/0tj2vw.jpg"
+const johso = "https://files.catbox.moe/2g5sp7.jpg"
 cmd({
     pattern: "donate",
     alias: ["support", "pay", "donation"],
@@ -44,6 +44,7 @@ cmd({
         reply("❌ An error occurred while fetching donation details.");
     }
 });
+
 
 
 
