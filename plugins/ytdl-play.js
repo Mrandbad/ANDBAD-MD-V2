@@ -4,7 +4,7 @@ const yts = require('yt-search');
 
 cmd({
     pattern: "yt2",
-    alias: ["play2", "music"],
+    alias: ["play3", "music"],
     react: "🎵",
     desc: "Download audio from YouTube",
     category: "download",
