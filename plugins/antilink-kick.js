@@ -1,5 +1,4 @@
 const { cmd } = require('../command');
-const config = require("../config");
 
 // Anti-Link System
 const linkPatterns = [
@@ -27,7 +26,7 @@ const linkPatterns = [
 ];
 
 cmd({
-  'on': "body"
+  on: "body"
 }, async (conn, m, store, {
   from,
   body,
@@ -38,23 +37,28 @@ cmd({
   reply
 }) => {
   try {
+    // Only work in groups where bot is admin and sender is not admin
     if (!isGroup || isAdmins || !isBotAdmins) {
       return;
     }
 
+    // Check for links
     const containsLink = linkPatterns.some(pattern => pattern.test(body));
 
-    if (containsLink && config.ANTI_LINK_KICK === 'true') {
-      await conn.sendMessage(from, { 'delete': m.key }, { 'quoted': m });
+    if (containsLink) {
+      // Delete message
+      await conn.sendMessage(from, { delete: m.key });
+
+      // Warn + remove user
       await conn.sendMessage(from, {
-        'text': `⚠️ Links are not allowed in this group.\n@${sender.split('@')[0]} has been removed. 🚫`,
-        'mentions': [sender]
-      }, { 'quoted': m });
+        text: `⚠️ Links are not allowed in this group.\n@${sender.split('@')[0]} has been removed. 🚫`,
+        mentions: [sender]
+      });
 
       await conn.groupParticipantsUpdate(from, [sender], "remove");
     }
   } catch (error) {
-    console.error(error);
-    reply("An error occurred while processing the message.");
+    console.error("Anti-link error:", error);
+    reply("❌ An error occurred while processing the message.");
   }
 });
