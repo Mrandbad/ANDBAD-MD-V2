@@ -1,29 +1,8 @@
 const { cmd } = require('../command');
 
-// Anti-Link System
-const linkPatterns = [
-  /https?:\/\/(?:chat\.whatsapp\.com|wa\.me)\/\S+/gi,
-  /^https?:\/\/(www\.)?whatsapp\.com\/channel\/([a-zA-Z0-9_-]+)$/,
-  /wa\.me\/\S+/gi,
-  /https?:\/\/(?:t\.me|telegram\.me)\/\S+/gi,
-  /https?:\/\/(?:www\.)?youtube\.com\/\S+/gi,
-  /https?:\/\/youtu\.be\/\S+/gi,
-  /https?:\/\/(?:www\.)?facebook\.com\/\S+/gi,
-  /https?:\/\/fb\.me\/\S+/gi,
-  /https?:\/\/(?:www\.)?instagram\.com\/\S+/gi,
-  /https?:\/\/(?:www\.)?twitter\.com\/\S+/gi,
-  /https?:\/\/(?:www\.)?tiktok\.com\/\S+/gi,
-  /https?:\/\/(?:www\.)?linkedin\.com\/\S+/gi,
-  /https?:\/\/(?:www\.)?snapchat\.com\/\S+/gi,
-  /https?:\/\/(?:www\.)?pinterest\.com\/\S+/gi,
-  /https?:\/\/(?:www\.)?reddit\.com\/\S+/gi,
-  /https?:\/\/ngl\/\S+/gi,
-  /https?:\/\/(?:www\.)?discord\.com\/\S+/gi,
-  /https?:\/\/(?:www\.)?twitch\.tv\/\S+/gi,
-  /https?:\/\/(?:www\.)?vimeo\.com\/\S+/gi,
-  /https?:\/\/(?:www\.)?dailymotion\.com\/\S+/gi,
-  /https?:\/\/(?:www\.)?medium\.com\/\S+/gi
-];
+// Regex for WhatsApp links
+const groupLinkRegex = /chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i;
+const channelLinkRegex = /whatsapp\.com\/channel\/([0-9A-Za-z]+)/i;
 
 cmd({
   on: "body"
@@ -37,28 +16,44 @@ cmd({
   reply
 }) => {
   try {
-    // Only work in groups where bot is admin and sender is not admin
-    if (!isGroup || isAdmins || !isBotAdmins) {
-      return;
-    }
+    if (!isGroup || isAdmins || !isBotAdmins) return;
 
-    // Check for links
-    const containsLink = linkPatterns.some(pattern => pattern.test(body));
+    let isGroupLink = body.match(groupLinkRegex);
+    let isChannelLink = body.match(channelLinkRegex);
 
-    if (containsLink) {
-      // Delete message
-      await conn.sendMessage(from, { delete: m.key });
+    if ((isGroupLink || isChannelLink) && !isAdmins) {
+      try {
+        // Ignore if it's the current group's own invite link
+        if (isGroupLink) {
+          const linkThisGroup = `https://chat.whatsapp.com/${await conn.groupInviteCode(from)}`;
+          if (body.includes(linkThisGroup)) return;
+        }
+      } catch (error) {
+        console.error("[ERROR] Could not get group code:", error);
+      }
 
-      // Warn + remove user
+      // Delete the message
+      try {
+        await conn.sendMessage(from, { delete: m.key });
+      } catch (err) {
+        console.error("Could not delete the message:", err);
+      }
+
+      // Notify and remove the user
       await conn.sendMessage(from, {
-        text: `⚠️ Links are not allowed in this group.\n@${sender.split('@')[0]} has been removed. 🚫`,
+        text: `> ✦ @${sender.split('@')[0]} has been removed for *Anti-Link*! Links to ${isChannelLink ? 'channels' : 'other groups'} are not allowed.`,
         mentions: [sender]
       });
 
-      await conn.groupParticipantsUpdate(from, [sender], "remove");
+      try {
+        await conn.groupParticipantsUpdate(from, [sender], 'remove');
+        console.log(`User ${sender} removed from group ${from}`);
+      } catch (err) {
+        console.error("Could not remove the user:", err);
+      }
     }
   } catch (error) {
     console.error("Anti-link error:", error);
-    reply("❌ An error occurred while processing the message.");
+    reply("❌ An error occurred while processing anti-link.");
   }
 });
