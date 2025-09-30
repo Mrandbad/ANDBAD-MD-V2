@@ -1,5 +1,9 @@
 const { cmd } = require('../command');
 
+// Regex for WhatsApp links
+const groupLinkRegex = /chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i;
+const channelLinkRegex = /whatsapp\.com\/channel\/([0-9A-Za-z]+)/i;
+
 cmd({
   on: "body"
 }, async (conn, m, store, {
@@ -7,81 +11,53 @@ cmd({
   body,
   sender,
   isGroup,
-  isAdmins,
-  isBotAdmins,
+  isAdmin,        // use singular to match your old code
+  isBotAdmin,
   reply
 }) => {
   try {
-    // Initialize warnings if not exists
-    if (!global.warnings) {
-      global.warnings = {};
-    }
+    if (!isGroup) return;          // only in groups
+    if (!isBotAdmin) return;       // bot must be admin
+    if (isAdmin) return;           // ignore group admins
 
-    // Only act in groups where bot is admin and sender isn't admin
-    if (!isGroup || isAdmins || !isBotAdmins) {
-      return;
-    }
+    // Prefer m.text if body is empty
+    const textMsg = body || m.text || "";
+    let isGroupLink = textMsg.match(groupLinkRegex);
+    let isChannelLink = textMsg.match(channelLinkRegex);
 
-    // List of link patterns to detect
-    const linkPatterns = [
-      /https?:\/\/(?:chat\.whatsapp\.com|wa\.me)\/\S+/gi,
-      /https?:\/\/(?:api\.whatsapp\.com|wa\.me)\/\S+/gi,
-      /wa\.me\/\S+/gi,
-      /https?:\/\/(?:t\.me|telegram\.me)\/\S+/gi,
-      /https?:\/\/(?:www\.)?\.com\/\S+/gi,
-      /https?:\/\/(?:www\.)?twitter\.com\/\S+/gi,
-      /https?:\/\/(?:www\.)?linkedin\.com\/\S+/gi,
-      /https?:\/\/(?:whatsapp\.com|channel\.me)\/\S+/gi,
-      /https?:\/\/(?:www\.)?reddit\.com\/\S+/gi,
-      /https?:\/\/(?:www\.)?discord\.com\/\S+/gi,
-      /https?:\/\/(?:www\.)?twitch\.tv\/\S+/gi,
-      /https?:\/\/(?:www\.)?vimeo\.com\/\S+/gi,
-      /https?:\/\/(?:www\.)?dailymotion\.com\/\S+/gi,
-      /https?:\/\/(?:www\.)?medium\.com\/\S+/gi
-    ];
-
-    // Check if message contains any forbidden links
-    const containsLink = linkPatterns.some(pattern => pattern.test(body));
-
-    // Always enforce anti-link automatically
-    if (containsLink) {
-      console.log(`Link detected from ${sender}: ${body}`);
-
-      // Try to delete the message
+    if (isGroupLink || isChannelLink) {
       try {
-        await conn.sendMessage(from, { delete: m.key });
-        console.log(`Message deleted: ${m.key.id}`);
+        // Ignore if it’s this group’s own invite link
+        if (isGroupLink) {
+          const linkThisGroup = `https://chat.whatsapp.com/${await conn.groupInviteCode(from)}`;
+          if (textMsg.includes(linkThisGroup)) return;
+        }
       } catch (error) {
-        console.error("Failed to delete message:", error);
+        console.error("[ERROR] Could not get group code:", error);
       }
 
-      // Update warning count for user
-      global.warnings[sender] = (global.warnings[sender] || 0) + 1;
-      const warningCount = global.warnings[sender];
+      // Delete message
+      try {
+        await conn.sendMessage(from, { delete: m.key });
+      } catch (err) {
+        console.error("Could not delete the message:", err);
+      }
 
-      // Handle warnings
-      if (warningCount < 4) {
-        await conn.sendMessage(from, {
-          text: `‎*⚠️ LINKS ARE NOT ALLOWED ⚠️*\n` +
-                `*╭────⬡ WARNING ⬡────*\n` +
-                `*├▢ USER :* @${sender.split('@')[0]}!\n` +
-                `*├▢ COUNT : ${warningCount}*\n` +
-                `*├▢ REASON : LINK SENDING*\n` +
-                `*├▢ WARN LIMIT : 2*\n` +
-                `*╰────────────────*`,
-          mentions: [sender]
-        });
-      } else {
-        await conn.sendMessage(from, {
-          text: `@${sender.split('@')[0]} *HAS BEEN REMOVED - WARN LIMIT EXCEEDED!*`,
-          mentions: [sender]
-        });
-        await conn.groupParticipantsUpdate(from, [sender], "remove");
-        delete global.warnings[sender];
+      // Warn and remove user
+      await conn.sendMessage(from, {
+        text: `> ✦ @${sender.split('@')[0]} has been removed for *Anti-Link*! Links to ${isChannelLink ? 'channels' : 'other groups'} are not allowed.`,
+        mentions: [sender]
+      });
+
+      try {
+        await conn.groupParticipantsUpdate(from, [sender], 'remove');
+        console.log(`User ${sender} removed from group ${from}`);
+      } catch (err) {
+        console.error("Could not remove the user:", err);
       }
     }
   } catch (error) {
     console.error("Anti-link error:", error);
-    reply("❌ An error occurred while processing the message.");
+    reply("❌ An error occurred while processing anti-link.");
   }
 });
