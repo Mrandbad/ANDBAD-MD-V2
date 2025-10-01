@@ -60,39 +60,23 @@ async (conn, mek, m, { from, q, command, reply }) => {
             }
         }, { quoted: mek });
 
-       // Handle Audio
-if (["play", "yta", "ytmp3", "playaudio"].includes(command)) {
-    // List of audio APIs
-    const audioAPIs = [
-        `https://apis.davidcyriltech.my.id/youtube/mp3?url=${url}`,
-        `https://api.ryzendesu.vip/api/downloader/ytmp3?url=${url}`,
-        `https://api.vreden.my.id/api/ytmp3?url=${url}`,
-        `https://api.neoxr.eu/api/youtube?url=${url}&type=audio&apikey=GataDios`
-    ];
+        // Handle Audio
+        if (["play", "yta", "ytmp3", "playaudio"].includes(command)) {
+            try {
+                const api = await (await fetch(`https://api.vreden.my.id/api/ytmp3?url=${url}`)).json();
+                const result = api?.result?.download?.url;
 
-    let result = null;
+                if (!result) throw new Error("⚠ Failed to fetch audio link.");
 
-    for (const apiUrl of audioAPIs) {
-        try {
-            const apiResponse = await (await fetch(apiUrl)).json();
-            // Try different result paths depending on API structure
-            result = apiResponse?.result?.download?.url || apiResponse?.data?.url;
-            if (result) break; // Stop loop if we got a valid audio link
-        } catch (err) {
-            console.log(`Audio API failed: ${apiUrl}`, err.message);
-            continue; // Try next API
+                await conn.sendMessage(from, {
+                    audio: { url: result },
+                    fileName: `${api.result.title}.mp3`,
+                    mimetype: "audio/mpeg"
+                }, { quoted: mek });
+            } catch (e) {
+                return reply("⚠︎ Could not send the audio. Try again later.");
+            }
         }
-    }
-
-    if (!result) return reply("⚠︎ Could not fetch audio from any API. Try again later.");
-
-    await conn.sendMessage(from, {
-        audio: { url: result },
-        fileName: `${ytResult.title || "audio"}.mp3`,
-        mimetype: "audio/mpeg"
-    }, { quoted: mek });
-}
-
 
         // Handle Video
         else if (["play2", "ytv", "ytmp4", "mp4"].includes(command)) {
