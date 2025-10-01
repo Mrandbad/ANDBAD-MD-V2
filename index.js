@@ -200,44 +200,36 @@ const port = process.env.PORT || 9090;
   const isMe = botNumber.includes(senderNumber)
   const isOwner = ownerNumber.includes(senderNumber) || isMe
   const botNumber2 = await jidNormalizedUser(conn.user.id);
-  // Helper: get @lid format for a JID
-async function getLidFromJid(id, conn) {
-  if (id.endsWith('@lid')) return id;
-  const res = await conn.onWhatsApp(id).catch(() => []);
-  return res[0]?.lid || id;
+  // Normalize JID helper
+function normalizeJid(jid) {
+  if (!jid) return jid;
+  // Remove device info and unify to @c.us format
+  return jid.replace(/:.*/, '').replace(/@s\.whatsapp\.net/, '@c.us');
 }
 
 // Fetch group metadata if in a group
-const groupMetadata = isGroup
-  ? ((conn.chats[from] || {}).metadata || await conn.groupMetadata(from).catch(() => null))
-  : {};
-const participants = isGroup ? (groupMetadata?.participants || []) : [];
-const groupName = isGroup ? groupMetadata?.subject : '';
+const groupMetadata = isGroup ? await conn.groupMetadata(from).catch(() => ({})) : {};
+const groupName = isGroup ? groupMetadata.subject : '';
+const participants = isGroup ? groupMetadata.participants || [] : [];
 
-// Get bot and sender in @lid and original formats
-const botLid = await getLidFromJid(conn.user.jid, conn);
-const senderLid = await getLidFromJid(sender, conn);
-const botJid = conn.user.jid;
-const senderJid = sender;
+// Get all admin JIDs in the group
+const groupAdmins = isGroup
+  ? participants.filter(p => p.admin).map(p => normalizeJid(p.id))
+  : [];
 
-// Find bot and sender in participants
-const bot = participants.find(p => p.id === botLid || p.id === botJid) || {};
-const user = participants.find(p => p.id === senderLid || p.id === senderJid) || {};
+// Normalize bot and sender JIDs
+const botJid = normalizeJid(conn.user.id);
+const senderJid = normalizeJid(sender);
 
 // Check admin status
-const isBotAdmins = !!bot.admin;
-const isRAdmin = user?.admin === "superadmin";
-const isAdmins = isRAdmin || user?.admin === "admin";
+const isBotAdmins = isGroup ? groupAdmins.includes(botJid) : false;
+const isAdmins = isGroup ? groupAdmins.includes(senderJid) : false;
 
 // Debug logs
 console.log('Bot JID:', botJid);
-console.log('Bot @lid:', botLid);
-console.log('Sender JID:', senderJid);
-console.log('Sender @lid:', senderLid);
-console.log('Group Admins:', participants.filter(p => p.admin).map(p => p.id));
+console.log('Group Admins:', groupAdmins);
 console.log('isBotAdmins:', isBotAdmins);
 console.log('isAdmins:', isAdmins);
-
 
   const isReact = m.message.reactionMessage ? true : false
   const reply = (teks) => {
