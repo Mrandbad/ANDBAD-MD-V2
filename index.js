@@ -223,7 +223,7 @@ const botJid = normalizeJid(conn.user.id);
 const senderJid = normalizeJid(sender);
 
 // Check admin status
-const isBotAdmins = isGroup ? groupAdmins.includes(botJid) : true;
+const isBotAdmins = isGroup ? groupAdmins.includes(botJid) : false;
 const isAdmins = isGroup ? groupAdmins.includes(senderJid) : false;
 
 // Debug logs
