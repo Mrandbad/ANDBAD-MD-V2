@@ -200,35 +200,36 @@ const port = process.env.PORT || 9090;
   const isMe = botNumber.includes(senderNumber)
   const isOwner = ownerNumber.includes(senderNumber) || isMe
   const botNumber2 = await jidNormalizedUser(conn.user.id);
- // Helper: extract just the phone number from JID
-function getNumber(jid) {
-  if (!jid) return '';
-  return jid.split('@')[0]; // returns only the number part
+  // Normalize JID helper
+function normalizeJid(jid) {
+  if (!jid) return jid;
+  // Remove device info and unify to @c.us format
+  return jid.replace(/:.*/, '').replace(/@s\.whatsapp\.net/, '@c.us');
 }
 
 // Fetch group metadata if in a group
 const groupMetadata = isGroup ? await conn.groupMetadata(from).catch(() => ({})) : {};
+const groupName = isGroup ? groupMetadata.subject : '';
 const participants = isGroup ? groupMetadata.participants || [] : [];
 
-// Get all admin numbers in the group
+// Get all admin JIDs in the group
 const groupAdmins = isGroup
-  ? participants.filter(p => p.admin).map(p => getNumber(p.id))
+  ? participants.filter(p => p.admin).map(p => normalizeJid(p.id))
   : [];
 
-// Extract bot number and sender number
-const botNumber = getNumber(conn.user.id);
-const senderNumber = getNumber(sender);
+// Normalize bot and sender JIDs
+const botJid = normalizeJid(conn.user.id);
+const senderJid = normalizeJid(sender);
 
-// Check admin status using just the number
-const isBotAdmins = isGroup ? groupAdmins.includes(botNumber) : false;
-const isAdmins = isGroup ? groupAdmins.includes(senderNumber) : false;
+// Check admin status
+const isBotAdmins = isGroup ? groupAdmins.includes(botJid) : false;
+const isAdmins = isGroup ? groupAdmins.includes(senderJid) : false;
 
 // Debug logs
-console.log('Bot Number:', botNumber);
-console.log('Group Admin Numbers:', groupAdmins);
+console.log('Bot JID:', botJid);
+console.log('Group Admins:', groupAdmins);
 console.log('isBotAdmins:', isBotAdmins);
 console.log('isAdmins:', isAdmins);
-
 
   const isReact = m.message.reactionMessage ? true : false
   const reply = (teks) => {
