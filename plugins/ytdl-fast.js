@@ -15,7 +15,7 @@ cmd({
 
   if (!q) return reply("❌ *Which song should I fetch?* Please provide a song name or keywords.");
 
-  reply("🎶 *Sɪʟᴠᴀ Sᴘᴀʀᴋ ɪs ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ...*\n🔍 Searching for your track...");
+  reply("🎶 *ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ...*\n🔍 Searching for your track...");
 
   try {
     const search = await ytSearch(q);
@@ -58,14 +58,14 @@ cmd({
 │ 🎤 *Artist:* ${artistName}
 │ 🔗 *Source:* YouTube
 ╰─────⊷
-🪄 _Delivered by Silva Spark Bot_ ✨
+
       `.trim(),
       contextInfo: {
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363200367779016@newsletter',
-          newsletterName: 'Silva Spark Audio Player 🎧',
+          newsletterJid: '1203632003677@newsletter',
+          newsletterName: 'Audio Player 🎧',
           serverMessageId: 144
         }
       }
@@ -87,7 +87,7 @@ cmd({
       fileName: `${songTitle.replace(/[^a-zA-Z0-9 ]/g, "")}.mp3`
     });
 
-    reply("✅ *Silva Spark just sent your requested song!* 🎶 Enjoy the vibes!");
+    reply("✅ *sent your requested song!* 🎶 Enjoy the vibes!");
 
   } catch (error) {
     console.error("❌ Audio Fetch Error:", error.message);
