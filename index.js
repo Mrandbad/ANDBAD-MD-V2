@@ -200,31 +200,12 @@ const port = process.env.PORT || 9090;
   const isMe = botNumber.includes(senderNumber)
   const isOwner = ownerNumber.includes(senderNumber) || isMe
   const botNumber2 = await jidNormalizedUser(conn.user.id);
- // Normalize JID helper
-function normalizeJid(jid) {
-  if (!jid) return jid;
-  return jid.replace(/:.*/, '').replace(/@s\.whatsapp\.net/, '@c.us');
-}
-
-// Fetch group metadata if in a group
-const groupMetadata = isGroup ? await conn.groupMetadata(from).catch(() => ({})) : {};
-const groupName = isGroup ? groupMetadata.subject : '';
-const participants = isGroup ? groupMetadata.participants || [] : [];
-
-// Get all admin JIDs in the group (includes 'admin' and 'superadmin')
-const groupAdmins = isGroup
-  ? participants
-      .filter(p => p.admin === 'admin' || p.admin === 'superadmin')
-      .map(p => normalizeJid(p.id))
-  : [];
-
-// Normalize bot and sender JIDs
-const botJid = normalizeJid(conn.user.id);
-const senderJid = normalizeJid(sender);
-
-// Check admin status
-const isBotAdmins = isGroup ? groupAdmins.includes(botJid) : false;
-const isAdmins = isGroup ? groupAdmins.includes(senderJid) : false;
+  const groupMetadata = isGroup ? await conn.groupMetadata(from).catch(e => {}) : ''
+  const groupName = isGroup ? groupMetadata.subject : ''
+  const participants = isGroup ? await groupMetadata.participants : ''
+  const groupAdmins = isGroup ? await getGroupAdmins(participants) : ''
+  const isBotAdmins = isGroup ? groupAdmins.includes(botNumber2) : false
+  const isAdmins = isGroup ? groupAdmins.includes(sender) : false
 
 // Debug logs
 console.log('Bot JID:', botJid);
