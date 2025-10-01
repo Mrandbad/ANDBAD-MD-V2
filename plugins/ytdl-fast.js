@@ -1,96 +1,129 @@
-
-const axios = require("axios");
-const ytSearch = require("yt-search");
+const fetch = require("node-fetch");
+const yts = require("yt-search");
 const { cmd } = require("../command");
 
+const youtubeRegexID = /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([a-zA-Z0-9_-]{11})/;
+
+// ===== PLAY / YT DOWNLOAD PLUGIN =====
 cmd({
-  pattern: "audio3",
-  alias: ["spotify", "ytmusic", "play", "song"],
-  react: "🫟",
-  desc: "Download and send MP3 audio from YouTube or Spotify",
-  category: "media",
-  filename: __filename
-}, async (client, message, details, context) => {
-  const { from, q, reply } = context;
+    pattern: "play",
+    alias: ["yta", "ytmp3", "playaudio", "play2", "ytv", "ytmp4", "mp4"],
+    react: "🎶",
+    desc: "Play or download YouTube songs and videos.",
+    category: "downloads",
+    use: ".play <song name / YouTube link>",
+    filename: __filename
+},
+async (conn, mek, m, { from, q, command, reply }) => {
+    try {
+        if (!q) return reply("❀ Please enter the name of the music or a YouTube link.");
 
-  if (!q) return reply("❌ *Which song should I fetch?* Please provide a song name or keywords.");
+        // Detect YouTube ID from URL
+        let videoIdToFind = q.match(youtubeRegexID) || null;
+        let ytResult = await yts(videoIdToFind === null ? q : `https://youtu.be/${videoIdToFind[1]}`);
 
-  reply("🎶 *ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ...*\n🔍 Searching for your track...");
+        // Pick correct video
+        if (videoIdToFind) {
+            const videoId = videoIdToFind[1];
+            ytResult = ytResult.all.find(item => item.videoId === videoId) || ytResult.videos.find(item => item.videoId === videoId);
+        }
+        ytResult = ytResult.all?.[0] || ytResult.videos?.[0] || ytResult;
 
-  try {
-    const search = await ytSearch(q);
-    const video = search.videos?.[0];
-    if (!video) return reply("❌ *No matching songs found.* Try another title.");
+        if (!ytResult || ytResult.length === 0) return reply("✧ No results found for your search.");
 
-    const link = video.url;
-    const apis = [
-      `https://apis.davidcyriltech.my.id/youtube/mp3?url=${link}`,
-      `https://api.ryzendesu.vip/api/downloader/ytmp3?url=${link}`
+        let { title, thumbnail, timestamp, views, ago, url, author } = ytResult;
+        const channel = author?.name || "Unknown";
+
+        const formattedViews = formatViews(views);
+        const infoMessage = `
+「✦」Downloading *${title || "Unknown"}*
+
+> ✧ Channel   » *${channel}*
+> ✰ Views     » *${formattedViews || "Unknown"}*
+> ⴵ Duration  » *${timestamp || "Unknown"}*
+> ✐ Published » *${ago || "Unknown"}*
+> 🜸 Link      » ${url}
+        `.trim();
+
+        // Send info preview with externalAdReply
+        await conn.sendMessage(from, {
+            text: infoMessage,
+            contextInfo: {
+                externalAdReply: {
+                    title: "ANDBAD-MD Player",
+                    body: "Powered by Andbad Organisation",
+                    mediaType: 1,
+                    sourceUrl: url,
+                    thumbnailUrl: thumbnail,
+                    renderLargerThumbnail: true
+                }
+            }
+        }, { quoted: mek });
+
+       // Handle Audio
+if (["play", "yta", "ytmp3", "playaudio"].includes(command)) {
+    // List of audio APIs
+    const audioAPIs = [
+        `https://apis.davidcyriltech.my.id/youtube/mp3?url=${url}`,
+        `https://api.ryzendesu.vip/api/downloader/ytmp3?url=${url}`,
+        `https://api.vreden.my.id/api/ytmp3?url=${url}`,
+        `https://api.neoxr.eu/api/youtube?url=${url}&type=audio&apikey=GataDios`
     ];
 
-    let audioUrl, songTitle, artistName, thumbnail;
+    let result = null;
 
-    for (const api of apis) {
-      try {
-        const { data } = await axios.get(api);
-        if (data.status === 200 || data.success) {
-          audioUrl = data.result?.downloadUrl || data.url;
-          songTitle = data.result?.title || video.title;
-          artistName = data.result?.author || video.author.name;
-          thumbnail = data.result?.image || video.thumbnail;
-          break;
+    for (const apiUrl of audioAPIs) {
+        try {
+            const apiResponse = await (await fetch(apiUrl)).json();
+            // Try different result paths depending on API structure
+            result = apiResponse?.result?.download?.url || apiResponse?.data?.url;
+            if (result) break; // Stop loop if we got a valid audio link
+        } catch (err) {
+            console.log(`Audio API failed: ${apiUrl}`, err.message);
+            continue; // Try next API
         }
-      } catch (e) {
-        console.warn(`⚠️ Failed API: ${api}\n${e.message}`);
-        continue;
-      }
     }
 
-    if (!audioUrl) return reply("⚠️ *All available servers failed to fetch your song.* Please try again later.");
+    if (!result) return reply("⚠︎ Could not fetch audio from any API. Try again later.");
 
-    // Send song preview card
-    await client.sendMessage(from, {
-      image: { url: thumbnail },
-      caption: `
-🎧 *Now Playing:*
-╭─────⊷
-│ 🎶 *Title:* ${songTitle}
-│ 🎤 *Artist:* ${artistName}
-│ 🔗 *Source:* YouTube
-╰─────⊷
+    await conn.sendMessage(from, {
+        audio: { url: result },
+        fileName: `${ytResult.title || "audio"}.mp3`,
+        mimetype: "audio/mpeg"
+    }, { quoted: mek });
+}
 
-      `.trim(),
-      contextInfo: {
-        forwardingScore: 999,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: '1203632003677@newsletter',
-          newsletterName: 'Audio Player 🎧',
-          serverMessageId: 144
+
+        // Handle Video
+        else if (["play2", "ytv", "ytmp4", "mp4"].includes(command)) {
+            try {
+                const response = await fetch(`https://api.neoxr.eu/api/youtube?url=${url}&type=video&quality=480p&apikey=GataDios`);
+                const json = await response.json();
+
+                if (!json?.data?.url) throw new Error("⚠ Failed to fetch video link.");
+
+                await conn.sendMessage(from, {
+                    video: { url: json.data.url },
+                    caption: title
+                }, { quoted: mek });
+            } catch (e) {
+                return reply("⚠︎ Could not send the video. Try again later.");
+            }
         }
-      }
-    });
 
-    reply("📤 *Uploading high-quality MP3...*");
-
-    // Send audio stream
-    await client.sendMessage(from, {
-      audio: { url: audioUrl },
-      mimetype: "audio/mp4",
-      ptt: false
-    });
-
-    // Send downloadable MP3 as a file
-    await client.sendMessage(from, {
-      document: { url: audioUrl },
-      mimetype: "audio/mp3",
-      fileName: `${songTitle.replace(/[^a-zA-Z0-9 ]/g, "")}.mp3`
-    });
-
-    reply("✅ *sent your requested song!* 🎶 Enjoy the vibes!");
-
-  } catch (error) {
-    console.error("❌ Audio Fetch Error:", error.message);
-    reply(`🚫 *Oops!* Something went wrong.\n\n🛠 ${error.message}`);
-  }
+    } catch (error) {
+        console.error(error);
+        return reply(`⚠︎ An error occurred: ${error.message}`);
+    }
 });
+
+// ===== Function to format view counts =====
+function formatViews(views) {
+    if (!views) return "Unknown";
+
+    if (views >= 1_000_000_000) return `${(views / 1_000_000_000).toFixed(1)}B (${views.toLocaleString()})`;
+    if (views >= 1_000_000) return `${(views / 1_000_000).toFixed(1)}M (${views.toLocaleString()})`;
+    if (views >= 1_000) return `${(views / 1_000).toFixed(1)}K (${views.toLocaleString()})`;
+
+    return views.toString();
+}
