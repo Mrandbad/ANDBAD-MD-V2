@@ -1,4 +1,4 @@
-const { cmd } = require('../command');
+/*const { cmd } = require('../command');
 const config = require("../config");
 
 // Default warn limit (can override in config.js by exporting WARN_LIMIT)
@@ -135,4 +135,4 @@ cmd({ on: "body" }, async (conn, m, store, {
     console.error('[ANTILINK] unexpected error:', error);
     try { reply('❌ Anti-link error: check bot logs'); } catch(e) {}
   }
-});
+});*/
