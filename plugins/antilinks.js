@@ -1,4 +1,4 @@
-const { cmd } = require('../command');
+/*const { cmd } = require('../command');
 const config = require("../config");
 
 cmd({
@@ -89,3 +89,4 @@ cmd({
     reply("❌ An error occurred while processing anti-link.");
   }
 });
+*/
