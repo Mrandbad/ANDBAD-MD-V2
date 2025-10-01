@@ -208,7 +208,7 @@ const port = process.env.PORT || 9090;
   const isAdmins = isGroup ? groupAdmins.includes(sender) : false
 
 // Debug logs
-console.log('Bot JID:', botJid);
+
 console.log('Group Admins:', groupAdmins);
 console.log('isBotAdmins:', isBotAdmins);
 console.log('isAdmins:', isAdmins);
