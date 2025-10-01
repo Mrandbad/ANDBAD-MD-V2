@@ -63,7 +63,7 @@ async (conn, mek, m, { from, q, command, reply }) => {
         // Handle Audio
         if (["play", "yta", "ytmp3", "playaudio"].includes(command)) {
             try {
-                const api = await (await fetch(`https://api.vreden.my.id/api/v1/download/youtube/audio?url=${url}`)).json();
+                const api = await (await fetch(`https://api.vreden.my.id/api/v1/download/youtube/audio?url=${url}&quality=128`)).json();
                 const result = api?.result?.download?.url;
 
                 if (!result) throw new Error("⚠ Failed to fetch audio link.");
