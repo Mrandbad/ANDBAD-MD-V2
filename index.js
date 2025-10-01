@@ -80,7 +80,7 @@ console.log("Session downloaded ✅")
   //=============================================
   
   async function connectToWA() {
-  console.log("Connecting silva spark to WhatsApp ⏳️...");
+  console.log("Connecting Andbad to WhatsApp ⏳️...");
   const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/sessions/')
   var { version } = await fetchLatestBaileysVersion()
   
