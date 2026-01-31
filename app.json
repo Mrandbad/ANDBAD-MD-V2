@@ -7,7 +7,7 @@
   "success_url": "/",
   "keywords": ["whatsapp-bot", "baileys", "nodejs", "heroku", "andbad-xmd"],
   "scripts": {
-    "postdeploy": "echo '🚀 Fee-Xmd has been successfully deployed!'"
+    "postdeploy": "echo '🚀 Andbad-Xmd has been successfully deployed!'"
   },
   "build": {
     "languages": ["nodejs"]
