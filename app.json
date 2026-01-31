@@ -1,11 +1,11 @@
 {
-  "name": "FEE-X MULTI DEVICE",
+  "name": "ANDBAD MULTI DEVICE",
   "description": "⚡ A lightning-fast WhatsApp bot with multi-device support, built on Node.js & Baileys.",
-  "website": "https://github.com/Fred1e/Fee-Xmd#readme",
-  "repository": "https://github.com/Fred1e/Fee-Xmd.git",
+  "website": "https://github.com/Mrandbad/ANDBAD-MD-V2#readme",
+  "repository": "https://github.com/Mrandbad/ANDBAD-MD-V2.git",
   "logo": "https://files.catbox.moe/w2axzk.jpg",
   "success_url": "/",
-  "keywords": ["whatsapp-bot", "baileys", "nodejs", "heroku", "fee-xmd"],
+  "keywords": ["whatsapp-bot", "baileys", "nodejs", "heroku", "andbad-xmd"],
   "scripts": {
     "postdeploy": "echo '🚀 Fee-Xmd has been successfully deployed!'"
   },
