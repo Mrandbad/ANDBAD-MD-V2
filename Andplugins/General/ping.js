@@ -96,7 +96,7 @@ module.exports = {
 
                 ctx.fillStyle = C.cyan;
                 ctx.font = "bold 24px sans-serif";
-                ctx.fillText("⚡ ANDBAD-XMD SYSTEM DASHBOARD", 40, 50);
+                ctx.fillText("⚡ 𝗔𝗡𝗗𝗕𝗔𝗗-𝗠𝗗-𝗩2 𝗦𝗬𝗦𝗧𝗘𝗠 𝗗𝗔𝗦𝗛𝗕𝗢𝗔𝗥𝗗", 40, 50);
                 ctx.fillStyle = C.subtext;
                 ctx.font = "16px sans-serif";
                 ctx.fillText("Heroku Instance • Real-Time Monitor", 40, 75);
