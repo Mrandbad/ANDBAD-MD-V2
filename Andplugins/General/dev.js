@@ -16,7 +16,7 @@ module.exports = {
 
       const devContact = {
         phoneNumber: '255782305254',
-        fullName: 'Mrandbad Dev'
+        fullName: '𝐌𝐑 𝐀𝐍𝐃𝐁𝐀𝐃𝐓𝐙'
       };
 
       const vcard = 'BEGIN:VCARD\n' 
@@ -28,7 +28,7 @@ module.exports = {
 
       await client.sendMessage(m.chat, {
         contacts: {
-          displayName: 'Mrandbad Dev',
+          displayName: '𝐌𝐑 𝐀𝐍𝐃𝐁𝐀𝐃𝐓𝐙',
           contacts: [{ vcard }]
         }
       }, { quoted: m });
