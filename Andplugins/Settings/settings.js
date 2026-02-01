@@ -6,7 +6,7 @@ module.exports = async (context) => {
     const { client, m, prefix } = context;
 
     const settings = await getSettings();
-    const botName = process.env.BOTNAME || settings.botname || '𝙁𝙀𝙀-𝙓𝙈𝘿';
+    const botName = process.env.BOTNAME || settings.botname || '𝐀𝐍𝐃𝐁𝐀𝐃-𝐌𝐃';
     const sudoUsers = await getSudoUsers();
     const bannedUsers = await getBannedUsers();
     const groupCount = Object.keys(await client.groupFetchAllParticipating()).length;
@@ -47,7 +47,7 @@ module.exports = async (context) => {
       m.chat,
       {
         text: message,
-        footer: '> powered by Andbadtz',
+        footer: '> powered by 𝑨𝒏𝒅𝒃𝒂𝒅𝑻𝒁',
         buttons,
         headerType: 1,
         viewOnce: true,
