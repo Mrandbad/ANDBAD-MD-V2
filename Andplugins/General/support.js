@@ -2,19 +2,19 @@ module.exports = async (context) => {
   const { client, m } = context;
 
   const message = `
-╭┈━〔 *🄵🄴🄴-🅇🄼🄳 Support Links* 〕━┈┈╮
+╭┈━〔 *𝐀𝐍𝐃𝐁𝐀𝐃-𝐌𝐃 𝑠𝑢𝑝𝑝𝑜𝑟𝑡 𝑙𝑖𝑛𝑘* 〕━┈┈╮
 
-> 👑 *Owner*  
-https://wa.me/255752593977
+> 👑 *𝑜𝑤𝑛𝑒𝑟*  
+https://wa.me/255782305254 
 
-> 📢 *Channel Link*  
+> 📢 *𝑐ℎ𝑎𝑛𝑛𝑒𝑙 𝑙𝑖𝑛𝑘*  
 https://whatsapp.com/channel/0029VbC9TRPCnA80RfS3Oi1V
 
-> 👥 *Group*  
+> 👥 *𝑔𝑟𝑜𝑢𝑝*  
 https://chat.whatsapp.com/DU79JfdnOI83ZFVAyD74Mo?mode=gi_t
 
 ╰━┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈━╯
-> ©Powered by Andbadtz
+> ©Powered by 𝐀𝐍𝐃𝐁𝐀𝐃𝐓𝐙🇹🇿
 `;
 
   try {
