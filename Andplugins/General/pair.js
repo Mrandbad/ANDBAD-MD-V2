@@ -58,14 +58,14 @@ module.exports = {
                 {
                     ...(imageBuffer ? { image: imageBuffer } : {}),
                     interactiveMessage: {
-                        header: '🩷 DEVICE WANT TO LOGIN',
+                        header: '♥︎ 𝗗𝗘𝗩𝗜𝗖𝗘✦𝗪𝗔𝗡𝗧✦𝗧𝗢✦𝗟𝗢𝗚𝗜𝗡',
                         title: `This is your Code:\n\n${pairingCode}\n\nTap the button below to copy`,
                         footer: '> Powered by 𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭✦',
                         buttons: [
                             {
                                 name: 'cta_copy',
                                 buttonParamsJson: JSON.stringify({
-                                    display_text: ' Copy Code',
+                                    display_text: ' 𝑪𝒐𝒑𝒚 𝒄𝒐𝒅𝒆',
                                     id: 'copy_pair_code',
                                     copy_code: pairingCode
                                 })
@@ -73,8 +73,8 @@ module.exports = {
                             {
                                 name: 'cta_url',
                                 buttonParamsJson: JSON.stringify({
-                                    display_text: '🌐 Website',
-                                    url: 'https://fee-xmd.online'
+                                    display_text: '🌐 Y̑̈ȏ̈ȗ̈t̑̈ȗ̈b̑̈ȇ̈ c̑̈h̑̈ȃ̈n̑̈n̑̈ȇ̈l̑̈ ',
+                                    url: 'https://www.youtube.com/@andbadtz'
                                 })
                             },
                             {
