@@ -42,7 +42,7 @@ module.exports = {
         const menuText = `❥┈┈┈┈┈┈┈┈┈┈┈┈➤\n┋✿ *( 💬 ) - Hello, @${m.pushName}* Welcome to the bots Menu\n\n` +   
             `- 計さ Bot INFORMATION✓\n\n` +  
             `➤ *Bσƚ*: \n` +  
-            `𝙁𝙀𝙀-𝙓𝙈𝘿 (bow down)\n` +  
+            `𝗔𝗡𝗗𝗕𝗔𝗗-𝗠𝗗 (bow down)\n` +  
 
             `➤ *Pɾҽϝιx*: \n` +  
             `${effectivePrefix} (learn it, dumbass)\n` +  
@@ -51,7 +51,7 @@ module.exports = {
             `${mode} ( ! )\n` +  
 
             `\n❥┈┈┈┈┈┈┈┈┈┈┈┈➤\n\n` +  
-            ` ( ! ) *Select a button below.* `;  
+            ` ( ! ) *𝘴𝘦𝘭𝘦𝘤𝘵 𝘢 𝘣𝘶𝘵𝘵𝘰𝘯 𝘣𝘦𝘭𝘭𝘰𝘸.* `;  
 
         const msg = generateWAMessageFromContent(  
             m.chat,  
