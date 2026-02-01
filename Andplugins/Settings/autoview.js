@@ -49,7 +49,7 @@ module.exports = async (context) => {
         m.chat,
         {
           text: formatStylishReply(`Autoview Status: ${settings.autoview ? 'ON ✅ (Watching all statuses)' : 'OFF ❌ (Ignoring statuses)'}\n\nPick an option, noob! 🥺`),
-          footer: '> powered by Andbadtz',
+          footer: '> 𝚌𝚛𝚎𝚊𝚝𝚎𝚍 𝚋𝚢 𝐀𝐧𝐝𝐛𝐚𝐝𝐓𝐙🇹🇿',
           buttons,
           headerType: 1,
           viewOnce: true,
