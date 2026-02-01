@@ -32,7 +32,7 @@ module.exports = async (context) => {
           m.chat,
           {
             text: formatStylishReply(`Chatbot PM is currently ${settings.chatbotpm ? 'ENABLED' : 'DISABLED'}. Use ${prefix}chatbotpm on/off to toggle.`),
-            footer: "> powered by Andbadtz",
+            footer: "> 𝚌𝚛𝚎𝚊𝚝𝚎𝚍 𝚋𝚢 𝐀𝐧𝐝𝐛𝐚𝐝𝐓𝐙🇹🇿",
             buttons,
             headerType: 1,
             viewOnce: true,
