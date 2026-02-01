@@ -48,7 +48,7 @@ module.exports = {
                         audio: { url: randomFile },
                         ptt: true,
                         mimetype: 'audio/mpeg',
-                        fileName: 'fee-start.mp3',
+                        fileName: '𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭-start.mp3',
                     },
                     { quoted: m }
                 );
@@ -65,7 +65,7 @@ module.exports = {
                     body: { 
                         text: `❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤\n┋✿ Yo @${m.pushName}! You actually bothered to check if I'm alive? 🙄\n┋✿ ${botname} is active 24/7, unlike your brain cells. 🧠⚡\n┋✿ Stop wasting my time and pick something useful below.\n❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤` 
                     },  
-                    footer: { text: `> Powered by Andbadtz` },  
+                    footer: { text: `> Powered by ✦𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭✦` },  
                     nativeFlowMessage: {  
                         buttons: [  
                             {  
