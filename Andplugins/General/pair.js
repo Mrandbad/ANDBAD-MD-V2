@@ -12,7 +12,7 @@ module.exports = {
         if (!text) {
             return client.sendMessage(
                 m.chat,
-                { text: `⁉️Use Example:\n${prefix}pair 25575259xxxx to get Andbad-md code` },
+                { text: `⁉️Use Example:\n${prefix}pair 25578230xxxx to get Andbad-md code` },
                 { quoted: m }
             );
         }
@@ -60,7 +60,7 @@ module.exports = {
                     interactiveMessage: {
                         header: '🩷 DEVICE WANT TO LOGIN',
                         title: `This is your Code:\n\n${pairingCode}\n\nTap the button below to copy`,
-                        footer: '> Powered by Andbadtz',
+                        footer: '> Powered by 𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭✦',
                         buttons: [
                             {
                                 name: 'cta_copy',
