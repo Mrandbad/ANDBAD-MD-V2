@@ -35,7 +35,7 @@ module.exports = {
         await client.sendMessage(m.chat, {
           interactiveMessage: {
             header: `📊 *Group Link Analysis*\n\n🔗 *Link:* ${link}\n📌 *Invite Code:* \`${code}\`\n\n*Group ID:* \`${id}\``,
-            footer: "> Powered by Andbadtz",
+            footer: "> Powered by ✦𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭✦",
             buttons: [
               {
                 name: "cta_copy",
@@ -64,7 +64,7 @@ module.exports = {
         await client.sendMessage(m.chat, {
           interactiveMessage: {
             header: `📢 *Channel Link Analysis*\n\n🔗 *Link:* ${link}\n📌 *Channel Code:* \`${code}\`\n\n*Channel ID:* \`${id}\``,
-            footer: "> Powered by Andbadtz",
+            footer: "> Powered by ✦𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭✦",
             buttons: [
               {
                 name: "cta_copy",
