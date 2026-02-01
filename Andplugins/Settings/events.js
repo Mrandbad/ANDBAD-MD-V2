@@ -30,7 +30,7 @@ module.exports = async (context) => {
 
       const value = args[0]?.toLowerCase();
       let groupSettings = await getGroupSettings(jid);
-      console.log('Fee-Xmd: Group settings for', jid, ':', groupSettings);
+      console.log('𝗔𝗡𝗗𝗕𝗔𝗗-𝗠𝗗-𝗩2: Group settings for', jid, ':', groupSettings);
       let isEnabled = groupSettings?.events === true || groupSettings?.events === 'true';
 
       if (value === 'on' || value === 'off') {
@@ -70,7 +70,7 @@ module.exports = async (context) => {
           text: formatStylishReply(
             `Events Status: ${isEnabled ? 'ON 🥶' : 'OFF 😴'}. Pick a vibe, noob! 😈`
           ),
-          footer: '> powered by Andbadtz',
+          footer: '> powered by ✦𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭✦',
           buttons,
           headerType: 1,
           viewOnce: true,
