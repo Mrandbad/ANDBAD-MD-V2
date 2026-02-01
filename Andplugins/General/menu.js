@@ -65,7 +65,7 @@ module.exports = {
                             fileLength: '1435',  
                             pageCount: 0,  
                             mediaKey: 'MWO6fI223TY8T0i9onNcwNBBPldWfwp1j1FPKCiJFzw=',  
-                            fileName: 'FEE-XMD MENU',  
+                            fileName: '𝐀𝐍𝐃𝐁𝐀𝐃-𝐌𝐃 𝐌𝐄𝐍𝐔',  
                             fileEncSha256: 'ZS8v9tio2un1yWVOOG3lwBxiP+mNgaKPY9+wl5pEoi8=',  
                             directPath: '/v/t62.7119-24/539012045_745537058346694_1512031191239726227_n.enc?ccb=11-4&oh=01_Q5Aa2QGGiJj--6eHxoTTTTzuWtBgCrkcXBz9hN_y2s_Z1lrABA&oe=68D7901C&_nc_sid=5e03e0',  
                             mediaKeyTimestamp: '1756370084',  
@@ -74,7 +74,7 @@ module.exports = {
                         hasMediaAttachment: true,  
                     },  
                     body: { text: menuText },  
-                    footer: { text: `Powered by Andbadtz` },  
+                    footer: { text: `Powered by 𝐀𝐧𝐝𝐛𝐚𝐝𝐓𝐙` },  
                     nativeFlowMessage: {  
                         buttons: [  
                             {
@@ -89,32 +89,32 @@ module.exports = {
                                 name: 'cta_url',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: '📘 𝙁𝙖𝙘𝙚𝙗𝙤𝙤𝙠 Support',
-                                    url: 'https://facebook.com/FrediEzra',
-                                    merchant_url: 'https://facebook.com/FrediEzra',
+                                    url: 'https://www.facebook.com/profile.php?id=100080173127096',
+                                    merchant_url: 'https://www.facebook.com/profile.php?id=100080173127096',
                                 }),
                             },
                             {
                                 name: 'cta_url',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: '📷 𝙄𝙣𝙨𝙩𝙖𝙜𝙧𝙖𝙢 Support',
-                                    url: 'https://instagram.com/frediezra',
-                                    merchant_url: 'https://instagram.com/frediezra',
+                                    url: 'https://www.instagram.com/andbadtz?igsh=N3BvN3Q5ZXA5OTky',
+                                    merchant_url: 'https://www.instagram.com/andbadtz?igsh=N3BvN3Q5ZXA5OTky',
                                 }),
                             },
                             {
                                 name: 'cta_url',
                                 buttonParamsJson: JSON.stringify({
                                     display_text: '🎵 𝙏𝙞𝙠𝙏𝙤𝙠 Support',
-                                    url: 'https://tiktok.com/frediezra1',
-                                    merchant_url: 'https://tiktok.com/frediezra1',
+                                    url: 'tiktok.com/@andbadtz',
+                                    merchant_url: 'tiktok.com/@andbadtz',
                                 }),
                             },
                             {  
                                 name: 'cta_url',  
                                 buttonParamsJson: JSON.stringify({  
                                     display_text: '🐙 𝙂𝙞𝙩𝙃𝙪𝙗 𝙍𝙚𝙥𝙤',  
-                                    url: 'https://github.com/Fred1e/Fee-Xmd',  
-                                    merchant_url: 'https://github.com/Fred1e/Fee-Xmd',  
+                                    url: 'https://github.com/Mrandbad/ANDBAD-MD-V2',  
+                                    merchant_url: 'https://github.com/Mrandbad/ANDBAD-MD-V2',  
                                 }),  
                             },  
                             {  
@@ -176,7 +176,7 @@ module.exports = {
                                 in_thread_buttons_limit: 2,  
                                 divider_indices: [1, 2],  
                                 list_title: 'Select Command',  
-                                button_title: 'ANDBAD MENU',  
+                                button_title: '𝐀𝐍𝐃𝐁𝐀𝐃 𝐌𝐄𝐍𝐔',  
                             },  
                         }),  
                     },  
