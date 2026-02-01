@@ -12,7 +12,7 @@ module.exports = {
         if (!text) {
             return client.sendMessage(
                 m.chat,
-                { text: `⁉️Use Example:\n${prefix}pair 25578230xxxx to get Andbad-md code` },
+                { text: `⁉️Use Example:\n${prefix}pair 25578230xxxx 𝗍𝗈 𝗀𝖾𝗍 ✦𝗔𝗡𝗗𝗕𝗔𝗗-𝗠𝗗-𝗩2✦ 𝖼𝗈𝖽𝖾` },
                 { quoted: m }
             );
         }
