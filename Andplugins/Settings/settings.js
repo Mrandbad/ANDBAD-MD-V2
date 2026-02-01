@@ -32,7 +32,7 @@ module.exports = async (context) => {
     ];
 
     const message = formatStylishReply(
-      `*𝙁𝙀𝙀-𝙓𝙈𝘿 Settings* 🔥\n\n` +
+      `*𝐀𝐍𝐃𝐁𝐀𝐃-𝐌𝐃 𝗦𝗘𝗧𝗧𝗜𝗡𝗚* 🔥\n\n` +
       `Botname: ${botName}\n` +
       `Prefix: ${settings.prefix || 'None'}\n` +
       `Antidelete: ${settings.antidelete ? '✅ ON' : '❌ OFF'}\n` +
@@ -47,7 +47,7 @@ module.exports = async (context) => {
       m.chat,
       {
         text: message,
-        footer: '> 𝚙𝚘𝚠𝚎𝚛 𝚋𝚢 𝐀𝐧𝐝𝐛𝐚𝐝𝐓𝐙',
+        footer: '> 𝚌𝚛𝚎𝚊𝚝𝚎𝚍 𝚋𝚢 𝐀𝐧𝐝𝐛𝐚𝐝𝐓𝐙🇹🇿',
         buttons,
         headerType: 1,
         viewOnce: true,
