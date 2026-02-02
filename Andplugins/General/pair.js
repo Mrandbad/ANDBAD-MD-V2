@@ -9,14 +9,14 @@ module.exports = {
 
         if (!text) {
             return await client.sendMessage(m.chat, {
-                text: `Example Usage: ${prefix}pair 2555752593977`
+                text: `Example Usage: ${prefix}pair 255782305254`
             }, { quoted: m });
         }
 
         try {
             // Send waiting message
             await client.sendMessage(m.chat, {
-                text: `*Wait Andbad-md is getting your pair code ...*`
+                text: `*Wait ✦𝗔𝗡𝗗𝗕𝗔𝗗-𝗠𝗗✦ is getting your pair code ...*`
             }, { quoted: m });
 
             // Prepare the API request
@@ -38,7 +38,7 @@ module.exports = {
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
                             newsletterJid: '120363421677960956@newsletter',
-                            newsletterName: "🄵🄴🄴-🅇🄼🄳 OFFICIAL",
+                            newsletterName: "✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦ OFFICIAL",
                             serverMessageId: 143,
                         },
                     }
