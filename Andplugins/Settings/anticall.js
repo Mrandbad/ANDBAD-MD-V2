@@ -49,7 +49,7 @@ module.exports = async (context) => {
         m.chat,
         {
           text: formatStylishReply(`Anticall Status: ${isEnabled ? 'ON 🥶' : 'OFF 😴'}. Pick a vibe, noob! 😈`),
-          footer: "> Powered by Andbadtz ",
+          footer: "> 𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖻𝗒 ✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦ ",
           buttons,
           headerType: 1,
           viewOnce: true,
