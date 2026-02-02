@@ -14,9 +14,9 @@ module.exports = {
 
     try {
       const possibleAudioPaths = [
-        path.join(__dirname, 'fredi_ezra', 'test.mp3'),
-        path.join(process.cwd(), 'fredi_ezra', 'test.mp3'),
-        path.join(__dirname, '..', 'fredi_ezra', 'test.mp3'),
+        path.join(__dirname, '✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦', 'test.mp3'),
+        path.join(process.cwd(), '✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦', 'test.mp3'),
+        path.join(__dirname, '..', '✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦', 'test.mp3'),
       ];
 
       let audioPath = null;
