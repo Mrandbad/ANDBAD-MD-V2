@@ -8,7 +8,7 @@ module.exports = {
   description: 'Displays the full bot command menu by category',
   run: async (context) => {
     const { client, m, totalCommands, mode, pict } = context;
-    const botname = 'ANDBADTZ'; 
+    const botname = '𝐀𝐍𝐃𝐁𝐀𝐃𝐓𝐙'; 
 
     const settings = await getSettings();
     const effectivePrefix = settings.prefix || ''; 
@@ -67,11 +67,11 @@ module.exports = {
     menuText += `┋ 📚 *LιႦɾαɾყ*: Baileys\n`;
     menuText += `╰❥┈┈┈┈┈┈┈┈┈┈➤\n\n`;
 
-    menuText += `*COMMANDS REGISTRY ☑*\n\n`;
+    menuText += `*𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗬 ☑*\n\n`;
 
     let commandCount = 0;
     for (const category of categories) {
-      let commandFiles = fs.readdirSync(`./frediCMD/${category.name}`).filter(file => file.endsWith('.js'));
+      let commandFiles = fs.readdirSync(`./𝐀𝐧𝐝𝐛𝐚𝐝𝐭𝐳CMD/${category.name}`).filter(file => file.endsWith('.js'));
 
       if (commandFiles.length === 0 && category.name !== '+18') continue;
 
@@ -96,15 +96,15 @@ module.exports = {
       menuText += `❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤\n\n`;
     }
 
-    menuText += `> Powered by Andbadtz`;
+    menuText += `> Powered by 𝐀𝐧𝐝𝐛𝐚𝐝𝐓𝐙🇹🇿`;
 
     await client.sendMessage(m.chat, {
       text: menuText,
       contextInfo: {
         externalAdReply: {
           showAdAttribution: false,
-          title: `ANDBADTZ`,
-          body: `Made by Mrandbad from Tanzania`,
+          title: `𝑨𝒏𝒅𝒃𝒂𝒅𝑻𝒁`,
+          body: `Made by 𝗠𝗥 𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭 from 𝖳𝖺𝗇𝗓𝖺𝗇𝗂𝖺`,
           thumbnail: pict,
           sourceUrl: `https://github.com/Mrandbad/ADNBAD-MD-V2`,
           mediaType: 1,
