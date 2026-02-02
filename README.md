@@ -44,7 +44,7 @@ Deploy your own instance of **𝚫𝚴𝐃𝚩𝚫𝐃-𝚳𝐃-𝛁2** quickly 
 **Steps:**
 1. Click the **Deploy to Heroku** button above.  
 2. Wait for your Heroku app to build and launch.  
-3. Access your bot pairing code here: [Get Pairing Code](https://andbad-qr-k71b.onrender.com)  
+3. Access your bot pairing code here: [Get Pairing Code](https://andbad-pairv.onrender.com)  
 4. Copy the pairing code and scan it in your WhatsApp to link your device.  
 5. Enjoy your AI WhatsApp bot instantly!  
 
