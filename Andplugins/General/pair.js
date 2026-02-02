@@ -1,6 +1,4 @@
 const axios = require('axios');
-const fs = require('fs');
-const path = require('path');
 
 module.exports = {
     name: 'pair',
@@ -10,106 +8,54 @@ module.exports = {
         const { client, m, text, prefix } = context;
 
         if (!text) {
-            return client.sendMessage(
-                m.chat,
-                { text: `⁉️Use Example:\n${prefix}pair 25578230xxxx 𝗍𝗈 𝗀𝖾𝗍 ✦𝗔𝗡𝗗𝗕𝗔𝗗-𝗠𝗗-𝗩2✦ 𝖼𝗈𝖽𝖾` },
-                { quoted: m }
-            );
+            return await client.sendMessage(m.chat, {
+                text: `Example Usage: ${prefix}pair 2555752593977`
+            }, { quoted: m });
         }
 
         try {
-            await client.sendMessage(
-                m.chat,
-                { react: { text: '⌛', key: m.key } }
-            );
+            // Send waiting message
+            await client.sendMessage(m.chat, {
+                text: `*Wait Andbad-md is getting your pair code ...*`
+            }, { quoted: m });
 
-            // clean number
+            // Prepare the API request
             const number = text.replace(/[^0-9]/g, '');
-            const apiUrl = `https://fee-xmd-pair.onrender.com/code?number=${encodeURIComponent(number)}`;
+            const encodedNumber = encodeURIComponent(number);
+            const apiUrl = `https://andbad-pairv.onrender.com/code?number=${encodedNumber}`;
 
+            // Fetch the pairing code from the API
             const response = await axios.get(apiUrl);
-            if (!response.data || !response.data.code) {
-                throw new Error('Invalid API response');
-            }
+            const data = response.data;
 
-            const pairingCode = response.data.code;
-
-            await client.sendMessage(
-                m.chat,
-                { react: { text: '✅', key: m.key } }
-            );
-
-            const imagesDir = path.join(__dirname, '../andbad_tz');
-            let imageBuffer;
-
-            if (fs.existsSync(imagesDir)) {
-                const images = fs.readdirSync(imagesDir).filter(f =>
-                    /^menu\d+\.jpg$/i.test(f)
-                );
-                if (images.length > 0) {
-                    const random = images[Math.floor(Math.random() * images.length)];
-                    imageBuffer = fs.readFileSync(path.join(imagesDir, random));
-                }
-            }
-
-       
-            await client.sendMessage(
-                m.chat,
-                {
-                    ...(imageBuffer ? { image: imageBuffer } : {}),
-                    interactiveMessage: {
-                        header: '♥︎ 𝗗𝗘𝗩𝗜𝗖𝗘✦𝗪𝗔𝗡𝗧✦𝗧𝗢✦𝗟𝗢𝗚𝗜𝗡',
-                        title: `This is your Code:\n\n${pairingCode}\n\nTap the button below to copy`,
-                        footer: '> Powered by 𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭✦',
-                        buttons: [
-                            {
-                                name: 'cta_copy',
-                                buttonParamsJson: JSON.stringify({
-                                    display_text: ' 𝑪𝒐𝒑𝒚 𝒄𝒐𝒅𝒆',
-                                    id: 'copy_pair_code',
-                                    copy_code: pairingCode
-                                })
-                            },
-                            {
-                                name: 'cta_url',
-                                buttonParamsJson: JSON.stringify({
-                                    display_text: '🌐 Y̑̈ȏ̈ȗ̈t̑̈ȗ̈b̑̈ȇ̈ c̑̈h̑̈ȃ̈n̑̈n̑̈ȇ̈l̑̈ ',
-                                    url: 'https://www.youtube.com/@andbadtz'
-                                })
-                            },
-                            {
-                                name: 'cta_url',
-                                buttonParamsJson: JSON.stringify({
-                                    display_text: '✨ Source Link',
-                                    url: 'https://github.com/Mrandbad/ANDBAD-MD-V2'
-                                })
-                            },
-                            {
-                                name: 'cta_url',
-                                buttonParamsJson: JSON.stringify({
-                                    display_text: '🧧 View Channel',
-                                    url: 'https://whatsapp.com/channel/0029VbC9TRPCnA80RfS3Oi1V'
-                                })
-                            }
-                        ]
+            if (data && data.code) {
+                const pairingCode = data.code;
+                
+                // Send the pairing code
+                await client.sendMessage(m.chat, {
+                    text: pairingCode,
+                    contextInfo: {
+                        isForwarded: true,
+                        forwardedNewsletterMessageInfo: {
+                            newsletterJid: '120363421677960956@newsletter',
+                            newsletterName: "🄵🄴🄴-🅇🄼🄳 OFFICIAL",
+                            serverMessageId: 143,
+                        },
                     }
-                },
-                { quoted: m }
-            );
+                }, { quoted: m });
 
+                // Send instructions
+                await client.sendMessage(m.chat, {
+                    text: `Here is your pair code, copy and paste it to the notification above or link devices.`
+                }, { quoted: m });
+            } else {
+                throw new Error("Invalid response from API.");
+            }
         } catch (error) {
-            console.error('PAIR ERROR:', error);
-
-            await client.sendMessage(
-                m.chat,
-                { react: { text: '❌', key: m.key } }
-            );
-
-            await client.sendMessage(
-                m.chat,
-                { text: '❌ Failed to generate pairing code. Try again later.' },
-                { quoted: m }
-            );
+            console.error("Pair command error:", error);
+            await client.sendMessage(m.chat, {
+                text: `Error getting response from API.`
+            }, { quoted: m });
         }
     }
 };
