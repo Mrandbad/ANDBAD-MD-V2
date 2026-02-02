@@ -1,5 +1,4 @@
 const { getSettings, getSudoUsers } = require("../Database/config");
-const fetch = require('node-fetch');
 
 module.exports = async (client, m, store, chatbotpmSetting) => {
     try {
@@ -7,22 +6,16 @@ module.exports = async (client, m, store, chatbotpmSetting) => {
             return;
         }
 
-        if (!chatbotpmSetting) {
-            return;
-        }
+        if (!chatbotpmSetting) return;
 
         const botNumber = await client.decodeJid(client.user.id);
         const sender = m.sender ? await client.decodeJid(m.sender) : null;
         const senderNumber = sender ? sender.split('@')[0] : null;
 
-        if (!sender || !senderNumber) {
-            return;
-        }
+        if (!sender || !senderNumber) return;
 
         const sudoUsers = await getSudoUsers();
-        if (sudoUsers.includes(senderNumber) || sender === botNumber) {
-            return;
-        }
+        if (sudoUsers.includes(senderNumber) || sender === botNumber) return;
 
         const messageContent = (
             m.message?.conversation ||
@@ -33,20 +26,12 @@ module.exports = async (client, m, store, chatbotpmSetting) => {
         ).trim();
 
         const { prefix } = await getSettings();
-        if (messageContent.startsWith(prefix)) {
-            return;
-        }
-
-        if (!messageContent) {
-            return;
-        }
+        if (!messageContent || messageContent.startsWith(prefix)) return;
 
         try {
             const encodedText = encodeURIComponent(messageContent);
-            const systemPrompt = encodeURIComponent("You were created by Mrandbadtz if asked so and your name is Andbad-Ai and you must always reply with a fee and cranky tone!! and must always answer the questions asked intelligently!");
-            const apiUrl = `https://api.nekolabs.web.id/text.gen/gemini/2.0-flash?text=${encodedText}&systemPrompt=${systemPrompt}`;
-            
-            const response = await fetch(apiUrl);
+            const apiUrl = `https://ab-chatgpt4o.abrahamdw882.workers.dev/?q=${encodedText}`;
+            const response = await fetch(apiUrl, { timeout: 15000 });
 
             if (!response.ok) {
                 throw new Error(`API request failed with status ${response.status}`);
@@ -54,25 +39,30 @@ module.exports = async (client, m, store, chatbotpmSetting) => {
 
             const data = await response.json();
 
-            if (!data.success || !data.result) {
-                throw new Error("invalid API response");
+            if (data.status !== "success" || !data.data) { 
+                throw new Error("Invalid API response: missing status or data");
             }
 
             await client.sendMessage(
                 m.key.remoteJid,
-                { text: data.result },
+                { text: data.data }, 
                 { quoted: m }
             );
 
         } catch (e) {
-            console.error(`andbad-md chatbotpm error:`, e);
+            console.error(`ANDBAD-MD ChatbotPM Error:`, e);
             await client.sendMessage(
                 m.key.remoteJid,
-                { text: `chatbot error: ${e.message}` },
+                { 
+                    text: ` ═❰ *Chatbot Notice* ❱══
+║ ⚠️ Oops! Something went wrong with the chatbot.
+║ 🕒 Please try again later.
+════════════════════` 
+               },
                 { quoted: m }
             );
         }
     } catch (e) {
-        console.error("fee-xmd chatbotpm error:", e);
+        console.error("ANDBAD-MD ChatbotPM Error:", e);
     }
 };
