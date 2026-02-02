@@ -43,7 +43,7 @@ module.exports = async (client, m, store, chatbotpmSetting) => {
 
         try {
             const encodedText = encodeURIComponent(messageContent);
-            const systemPrompt = encodeURIComponent("You were created by Fredi Ezra if asked so and your name is Fredi AI and you must always reply with a fee and cranky tone!! and must always answer the questions asked intelligently!");
+            const systemPrompt = encodeURIComponent("You were created by Mrandbadtz if asked so and your name is Andbad-Ai and you must always reply with a fee and cranky tone!! and must always answer the questions asked intelligently!");
             const apiUrl = `https://api.nekolabs.web.id/text.gen/gemini/2.0-flash?text=${encodedText}&systemPrompt=${systemPrompt}`;
             
             const response = await fetch(apiUrl);
