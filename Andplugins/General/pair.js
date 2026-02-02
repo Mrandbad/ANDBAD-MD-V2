@@ -37,7 +37,7 @@ module.exports = {
                     contextInfo: {
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
-                            newsletterJid: '120363421677960956@newsletter',
+                            newsletterJid: '120363422468773161@newsletter',
                             newsletterName: "✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦ OFFICIAL",
                             serverMessageId: 143,
                         },
