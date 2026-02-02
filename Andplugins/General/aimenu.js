@@ -7,7 +7,7 @@ module.exports = {
   description: 'Displays only the Ai menu',
   run: async (context) => {
     const { client, m, pict } = context;
-    const botname = 'ANDBADTZ';
+    const botname = '𝗔𝗡𝗗𝗕𝗔𝗗-𝗠𝗗-𝗩2';
 
     const settings = await getSettings();
     const effectivePrefix = settings.prefix || '';
@@ -31,7 +31,7 @@ module.exports = {
     menuText += `┋✿ 🔣 *Pɾҽϝιx*: ${effectivePrefix || 'None'}\n`;
     menuText += `❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤\n\n`;
 
-    menuText += `╭─➤ 「 AI MENU 🤖 」\n`;
+    menuText += `╭─➤ 「 𝗔𝗜 𝗠𝗘𝗡𝗨 🤖 」\n`;
 
     let commandFiles = fs.readdirSync('./Andplugins/AI').filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
@@ -41,15 +41,15 @@ module.exports = {
     }
 
     menuText += `❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤\n\n`;
-    menuText += `> Powered by Andbadtz`;
+    menuText += `> 𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖻𝗒 ✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦`;
 
     await client.sendMessage(m.chat, {
       text: menuText,
       contextInfo: {
         externalAdReply: {
           showAdAttribution: false,
-          title: `ANDBADTZ - Made with 💖`,
-          body: `Made by Andbadtz from Tanzania`,
+          title: `𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭 - 𝗠𝗮𝗱𝗲 𝘄𝗶𝘁𝗵 ♥︎`,
+          body: `𝘔𝘢𝘥𝘦 𝘣𝘺 𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭 𝘧𝘳𝘰𝘮 𝗧𝗔𝗡𝗭𝗔𝗡𝗜𝗔🇹🇿`,
           thumbnail: pict,
           sourceUrl: `https://github.com/Mrandbad/ANDBAD-MD-V2`,
           mediaType: 1,
