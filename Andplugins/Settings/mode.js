@@ -48,7 +48,7 @@ module.exports = async (context) => {
         m.chat,
         {
           text: formatStylishReply(`Current Mode: ${settings.mode ? settings.mode.toUpperCase() : 'Undefined, you noob! 🥶'}. Pick a mode, fool! 😔`),
-          footer: "> powered by Andbadtz",
+          footer: "> 𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖻𝗒 ✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦",
           buttons,
           headerType: 1,
           viewOnce: true,
