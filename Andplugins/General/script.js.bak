@@ -10,7 +10,7 @@ module.exports = async (context) => {
     }
 
     try {
-        const repoUrl = 'https://api.github.com/repos/Fred1e/FEE-XMD';
+        const repoUrl = 'https://api.github.com/repos//Mrandbad/ANDBAD-MD-V2';
         const response = await fetch(repoUrl);
         const repoData = await response.json();
 
@@ -37,7 +37,7 @@ module.exports = async (context) => {
                 interactiveMessage: {
                     header: `? ${botname}`,
                     title: replyText,
-                    footer: `Powered by Andbadtz`,
+                    footer: `𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖻𝗒 ✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦`,
                     buttons: [
                         // Row 1
                         {
@@ -50,8 +50,8 @@ module.exports = async (context) => {
                         {
                             name: 'cta_url',
                             buttonParamsJson: JSON.stringify({
-                                display_text: '🌐 𝙑𝙞𝙨𝙞𝙩 𝙎𝙞𝙩𝙚',
-                                url: 'https://fee-xmd.online'
+                                display_text: '🌐 𝗬𝗼𝘂𝘁𝘂𝗯𝗲 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 ',
+                                url: 'https://www.youtube.com/@andbadtz'
                             })
                         },
                         // Row 2
