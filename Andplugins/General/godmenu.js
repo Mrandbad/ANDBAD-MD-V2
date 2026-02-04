@@ -7,7 +7,7 @@ module.exports = {
   description: 'Displays only the God holy books menu',
   run: async (context) => {
     const { client, m, pict } = context;
-    const botname = 'ANDBADTZ';
+    const botname = '𝗔𝗡𝗗𝗕𝗔𝗗𝗧𝗭';
 
     const settings = await getSettings();
     const effectivePrefix = settings.prefix || '';
@@ -41,15 +41,15 @@ module.exports = {
     }
 
     menuText += `❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤\n\n`;
-    menuText += `> Powered by Andbadtz`;
+    menuText += `> Powered by 𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭`;
 
     await client.sendMessage(m.chat, {
       text: menuText,
       contextInfo: {
         externalAdReply: {
           showAdAttribution: false,
-          title: `ANDBADTZ`,
-          body: `Made by Mrandbad from Tanzania`,
+          title: `𝗔𝗡𝗗𝗕𝗔𝗗𝗧𝗭`,
+          body: `𝙼𝚊𝚍𝚎 𝚋𝚢 𝗠𝗿𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭 𝚏𝚛𝚘𝚖 𝚃𝙰𝙽𝚉𝙰𝙽𝙸𝙰`,
           thumbnail: pict,
           sourceUrl: `https://github.com/Mrandbad/ANDBAD-MD-V2`,
           mediaType: 1,
