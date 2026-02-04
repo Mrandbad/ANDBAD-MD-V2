@@ -19,11 +19,11 @@ module.exports = async (context) => {
   }
 
   try {
-    const replyText = `❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤\n┋✿ *Credits, Bitches*\n\nAll hail *fredi_ezra*, the badass who built this bot from the ground up. Nobody else gets credit—fuck ‘em. This is my empire, and I run this shit solo.\n\nBow down to *Andbad_tz* 🫡`;
+    const replyText = `❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤\n┋✿ *Credits, Bitches*\n\nAll hail *𝗔𝗻𝗱𝗿𝗲𝘄_𝗠𝗮𝗹𝗹𝘆𝗮*, the badass who built this bot from the ground up. Nobody else gets credit—fuck ‘em. This is my empire, and I run this shit solo.\n\nBow down to *𝗔𝗻𝗱𝗯𝗮𝗱_𝗧𝗭* 🫡`;
 
     await client.sendMessage(m.chat, {
       text: replyText,
-      footer: `Powered by Andbadtz`,
+      footer: `Powered by 𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭`,
       buttons: [
         { buttonId: `${prefix}dev`, buttonText: { displayText: `👤 ${toFancyFont('DEV')}` }, type: 1 }
       ],
