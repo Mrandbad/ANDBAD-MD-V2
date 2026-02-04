@@ -77,7 +77,7 @@ module.exports = {
 
     } catch (error) {
       console.error(`Del command fucked up: ${error.stack}`);
-      await m.reply(`❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤\nShit broke, @${m.sender.split('@')[0]}! Couldn’t delete the message. Try again, you useless fuck.\nCheck https://github.com/Fred1e/Fee-Xmd for help.\n❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤`, {
+      await m.reply(`❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤\nShit broke, @${m.sender.split('@')[0]}! Couldn’t delete the message. Try again, you useless fuck.\nCheck https://github.com/Mrandbad/ANDBAD-MD-V2 for help.\n❥┈┈┈┈┈┈┈┈┈┈┈┈┈┈➤`, {
         mentions: [m.sender]
       });
     }
