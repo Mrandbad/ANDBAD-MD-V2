@@ -1,5 +1,5 @@
 {
-  "name": "Fer-xmd",
+  "name": "𝐀𝐍𝐃𝐁𝐀𝐃",
   "version": "7.0.0",
   "description": "WhatsApp Multi Device Bot",
   "main": "index.js",
@@ -20,7 +20,7 @@
     "bot-md",
     "whatsapp-multi-device"
   ],
-  "base": "https://github.com/Fredi/FEE-XMD",
+  "base": "https://github.com/Mrandbad/ANDBAD-MD-V2",
   "author": "Fredi",
   "license": "MIT",
   "dependencies": {
@@ -106,10 +106,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fred1e/Fee-Xmd.git"
+    "url": "git+https://github.com/Mrandbad/ANDBAD-MD-V2.git"
   },
   "bugs": {
-    "url": "https://github.com/Fred1e/Fee-Xmd/issues"
+    "url": "https://github.com/Mrandbad/ANDBAD-MD-V2/issues"
   },
-  "homepage": "https://github.com/Fred1e/Fee-Xmd#readme"
+  "homepage": "https://github.com/Mrandbad/ANDBAD-MD-V2#readme"
 }
