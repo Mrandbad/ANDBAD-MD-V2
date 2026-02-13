@@ -33,7 +33,7 @@ module.exports = {
 
     menuText += `╭─➤ 「 𝗕𝗨𝗦𝗜𝗡𝗘𝗦𝗦 𝗠𝗘𝗡𝗨 💰 」\n`;
 
-    let commandFiles = fs.readdirSync('./AndbadCMD/Business').filter(file => file.endsWith('.js'));
+    let commandFiles = fs.readdirSync('./Andplugins/Business').filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
       const commandName = file.replace('.js', '');
       const fancyCommandName = toFancyFont(commandName);
