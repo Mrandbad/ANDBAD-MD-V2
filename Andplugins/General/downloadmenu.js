@@ -34,7 +34,7 @@ module.exports = {
 
     menuText += `╭┈✿ 「 DOWNLOADMENU 🎬 」\n`;
 
-    let commandFiles = fs.readdirSync('./andplugins/Media').filter(file => file.endsWith('.js'));
+    let commandFiles = fs.readdirSync('./Andplugins/Media').filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
       const commandName = file.replace('.js', '');
       const fancyCommandName = toFancyFont(commandName);
