@@ -33,7 +33,7 @@ module.exports = {
 
     menuText += `╭─➤ 「 +18MENU 🔞 」\n`;
 
-    let commandFiles = fs.readdirSync('./frediCMD/+18').filter(file => file.endsWith('.js'));
+    let commandFiles = fs.readdirSync('./Andplugins/+18').filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
       const commandName = file.replace('.js', '');
       const fancyCommandName = toFancyFont(commandName);
