@@ -7,7 +7,7 @@ module.exports = {
   description: 'Displays only the Fun Commands menu',
   run: async (context) => {
     const { client, m, pict } = context;
-    const botname = '𝙁𝙀𝙀-𝙓𝙈𝘿';
+    const botname = 'Andbadtz';
 
     const settings = await getSettings();
     const effectivePrefix = settings.prefix || '';
@@ -33,7 +33,7 @@ module.exports = {
 
     menuText += `╭─➤ 「 LOGO 🎨 」\n`;
 
-    let commandFiles = fs.readdirSync('./frediCMD/Fun').filter(file => file.endsWith('.js'));
+    let commandFiles = fs.readdirSync('./Andplugins/Fun').filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
       const commandName = file.replace('.js', '');
       const fancyCommandName = toFancyFont(commandName);
