@@ -33,7 +33,7 @@ module.exports = {
 
     menuText += `╭─➤ 「 LOGO 🎨 」\n`;
 
-    let commandFiles = fs.readdirSync('./andplugins/Logo').filter(file => file.endsWith('.js'));
+    let commandFiles = fs.readdirSync('./Andplugins/Logo').filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
       const commandName = file.replace('.js', '');
       const fancyCommandName = toFancyFont(commandName);
