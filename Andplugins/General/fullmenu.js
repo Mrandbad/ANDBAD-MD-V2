@@ -71,7 +71,7 @@ module.exports = {
 
     let commandCount = 0;
     for (const category of categories) {
-      let commandFiles = fs.readdirSync(`./𝐀𝐧𝐝𝐛𝐚𝐝𝐭𝐳CMD/${category.name}`).filter(file => file.endsWith('.js'));
+      let commandFiles = fs.readdirSync(`./Andplugins/${category.name}`).filter(file => file.endsWith('.js'));
 
       if (commandFiles.length === 0 && category.name !== '+18') continue;
 
