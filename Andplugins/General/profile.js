@@ -36,7 +36,7 @@ module.exports = async (context) => {
 
         await client.sendMessage(m.chat, {
             image: { url: ppUrl },
-            caption: `👤 ${name}\n—\n𝗔𝗻𝗱𝗯𝗮𝗱𝗧𝗭`,
+            caption: `👤 ${name}\n—\n𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖻𝗒 ✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦`,
             mentions: targetUser !== m.sender ? [targetUser] : []
         }, { quoted: m });
 
