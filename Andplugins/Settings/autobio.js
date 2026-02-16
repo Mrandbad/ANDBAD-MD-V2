@@ -48,7 +48,7 @@ module.exports = async (context) => {
         m.chat,
         {
           text: formatStylishReply(`Autobio’s ${settings.autobio ? 'ON 🦁' : 'OFF 😴'}, dumbass. Pick a vibe, noob! 😈`),
-          footer: "> powered by Andbadtz",
+          footer: "> 𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖻𝗒 ✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦",
           buttons,
           headerType: 1,
           viewOnce: true,
