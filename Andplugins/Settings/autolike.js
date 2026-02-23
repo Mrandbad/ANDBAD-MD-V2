@@ -48,7 +48,7 @@ module.exports = async (context) => {
         m.chat,
         {
           text: formatStylishReply(`Autolike’s ${settings.autolike ? 'ON 🥶' : 'OFF 😴'}, dumbass. Pick a vibe, noob! 😈`),
-          footer: "> 𝒑𝒐𝒘𝒆𝒓𝒆𝒅 𝒃𝒚 𝒇𝒆𝒆-𝒙𝒎𝒅",
+          footer: "> 𝖢𝗋𝖾𝖺𝗍𝖾𝖽 𝖻𝗒 ✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦",
           buttons,
           headerType: 1,
           viewOnce: true,
