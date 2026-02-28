@@ -51,7 +51,7 @@ module.exports = {
       }
 
       // Default caption for group status
-      const defaultCaption = `Group status Posted By 𝐀𝐍𝐃𝐁𝐀𝐃 ✅\n\nJOIN\nhttps://chat.whatsapp.com/KERPI5K0w0L9rzU00QSw40`;
+      const defaultCaption = `Group status Posted By ✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦ DM +255782305254 ✅\n\nJOIN\nhttps://chat.whatsapp.com/DU79JfdnOI83ZFVAyD74Mo`;
 
       // Handle media types
       if (/image/.test(mime)) {
