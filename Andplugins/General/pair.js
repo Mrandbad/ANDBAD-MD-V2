@@ -16,13 +16,13 @@ module.exports = {
         try {
             // Send waiting message
             await client.sendMessage(m.chat, {
-                text: `*Wait ✦𝗔𝗡𝗗𝗕𝗔𝗗-𝗠𝗗✦ is getting your pair code ...*`
+                text: `*𝐰𝐚𝐢𝐭 ✦𝗔𝗡𝗗𝗕𝗔𝗗-𝗠𝗗-𝗩2✦ 𝐢𝐬 𝐠𝐞𝐭𝐭𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐩𝐚𝐢𝐫 𝐜𝐨𝐝𝐞 ...*`
             }, { quoted: m });
 
             // Prepare the API request
             const number = text.replace(/[^0-9]/g, '');
             const encodedNumber = encodeURIComponent(number);
-            const apiUrl = `https://andbad-pairv.onrender.com/code?number=${encodedNumber}`;
+            const apiUrl = `https://andbad-pair-v2.onrender.com/code?number=${encodedNumber}`;
 
             // Fetch the pairing code from the API
             const response = await axios.get(apiUrl);
@@ -38,7 +38,7 @@ module.exports = {
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
                             newsletterJid: '120363422468773161@newsletter',
-                            newsletterName: "✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦ OFFICIAL",
+                            newsletterName: "✦𝗔𝗻𝗱𝗯𝗱𝗧𝗭✦ 𝗠𝗗-𝗩2",
                             serverMessageId: 143,
                         },
                     }
@@ -46,7 +46,7 @@ module.exports = {
 
                 // Send instructions
                 await client.sendMessage(m.chat, {
-                    text: `Here is your pair code, copy and paste it to the notification above or link devices.`
+                    text: `𝗛𝗘𝗥𝗘 𝗜𝗦 𝗬𝗢𝗨𝗥 𝚙𝚊𝚒𝚛 𝚌𝚘𝚍𝚎, 𝗖𝗢𝗣𝗬 𝗔𝗡𝗗 𝗣𝗔𝗦𝗧 𝗜𝗧 𝗧𝗢 𝗧𝗛𝗘 𝐍𝐨𝐭𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝗔𝗕𝗢𝗩𝗘 𝗢𝗥 𝗟𝗜𝗡𝗞 𝗗𝗘𝗩𝗜𝗖𝗘𝗦.`
                 }, { quoted: m });
             } else {
                 throw new Error("Invalid response from API.");
